@@ -22,6 +22,9 @@ format:
   html: 
     code-link: true
     callout-appearance: simple
+    author-meta: "Rafael C. Alvarado"
+    number-sections: false
+
   # pdf:
   #   documentclass: scrreport
   # epub:

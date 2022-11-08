@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Rafael C. Alvarado">
 
 <title>The 4 + 1 Model of Data Science - 2&nbsp; The Image of the Pipeline</title>
 <style>
@@ -90,7 +91,7 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Image of the Pipeline</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-title">The Image of the Pipeline</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -123,17 +124,17 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./the-four-plus-one-model.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Image of the Pipeline</span></a>
+  <a href="./the-four-plus-one-model.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">The Image of the Pipeline</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./concluding-remarks.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Concluding Remarks</span></a>
+  <a href="./concluding-remarks.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Concluding Remarks</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -146,7 +147,7 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix-sources.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Primary Sources</span></a>
+  <a href="./appendix-sources.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Primary Sources</span></a>
   </div>
 </li>
       </ul>
@@ -160,12 +161,12 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#a-common-theme" id="toc-a-common-theme" class="nav-link active" data-scroll-target="#a-common-theme"><span class="toc-section-number">2.1</span>  A Common Theme</a></li>
-  <li><a href="#an-arc-with-four-zones" id="toc-an-arc-with-four-zones" class="nav-link" data-scroll-target="#an-arc-with-four-zones"><span class="toc-section-number">2.2</span>  An Arc with Four Zones</a></li>
-  <li><a href="#the-four-areas-plus-one" id="toc-the-four-areas-plus-one" class="nav-link" data-scroll-target="#the-four-areas-plus-one"><span class="toc-section-number">2.3</span>  The Four Areas, Plus One</a></li>
-  <li><a href="#two-principal-components" id="toc-two-principal-components" class="nav-link" data-scroll-target="#two-principal-components"><span class="toc-section-number">2.4</span>  Two Principal Components</a></li>
-  <li><a href="#final-representation" id="toc-final-representation" class="nav-link" data-scroll-target="#final-representation"><span class="toc-section-number">2.5</span>  Final Representation</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="toc-section-number">2.6</span>  References</a></li>
+  <li><a href="#a-common-theme" id="toc-a-common-theme" class="nav-link active" data-scroll-target="#a-common-theme">A Common Theme</a></li>
+  <li><a href="#an-arc-with-four-zones" id="toc-an-arc-with-four-zones" class="nav-link" data-scroll-target="#an-arc-with-four-zones">An Arc with Four Zones</a></li>
+  <li><a href="#the-four-areas-plus-one" id="toc-the-four-areas-plus-one" class="nav-link" data-scroll-target="#the-four-areas-plus-one">The Four Areas, Plus One</a></li>
+  <li><a href="#two-principal-components" id="toc-two-principal-components" class="nav-link" data-scroll-target="#two-principal-components">Two Principal Components</a></li>
+  <li><a href="#final-representation" id="toc-final-representation" class="nav-link" data-scroll-target="#final-representation">Final Representation</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
@@ -174,7 +175,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Image of the Pipeline</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-title">The Image of the Pipeline</span></h1>
 </div>
 
 
@@ -189,8 +190,8 @@ div.csl-indent {
 
 </header>
 
-<section id="a-common-theme" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="a-common-theme"><span class="header-section-number">2.1</span> A Common Theme</h2>
+<section id="a-common-theme" class="level2">
+<h2 class="anchored" data-anchor-id="a-common-theme">A Common Theme</h2>
 <p>A review of the literature of data science definitions, from sources attempting to define the field explicitly, as well as from self-definitions from adjacent fields such as data analysis and data mining, reveals that most definitions invoke the image of a data processing pipeline — a sequence of actions through which data flows as it moves from the consumption of so-called raw data to production of actionable results. Consumed data may come from a variety of sources — databases or intentional experiments or sensors. Results may be equally various, from the communication of analytical results to stake-holders to the development of a data product for use on the web. For a detailed review of these sources, see the <a href="./appendix-sources.html">Appendix</a>.</p>
 <p>An analysis of a representative sample of essays that define a data processing pipeline shows that the various stories consist of elements drawn from a standard sequence of about twelve elements, give or take a few, depending on how one might expand or contract terms. These may signified by a core set of verbs or event types (which narratologists call functions), with the understanding that many synonyms are employed in the examples:</p>
 <ol type="1">
@@ -221,8 +222,8 @@ div.csl-indent {
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="math inline">\(G\)</span> reflect</p>
 <p>Each of these may be considered a “chapter” in the story. Note that the number of verbs in each chapter title does not necessarily predict the length of its content. For example, the chapter on “model and interpret” covers a wide range of activities from a variety of perspectives, including classical statistics, machine learning, and computational simulation. It’s a big and complicated chapter, but it is just one chapter among seven, even though many may consider it to be the most important chapter.</p>
 </section>
-<section id="an-arc-with-four-zones" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="an-arc-with-four-zones"><span class="header-section-number">2.2</span> An Arc with Four Zones</h2>
+<section id="an-arc-with-four-zones" class="level2">
+<h2 class="anchored" data-anchor-id="an-arc-with-four-zones">An Arc with Four Zones</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/image1.png" class="img-fluid figure-img"></p>
@@ -246,8 +247,8 @@ div.csl-indent {
 <p>We can take the conflict of interpretations over the status of technical knowledge in data science as a clue and use it to identify two broad dimensions that cross-cut the functions in zones <span class="math inline">\(II\)</span> and <span class="math inline">\(III\)</span>: technical know-how and abstract representation. Technical know-how <span class="math inline">\(II´\)</span> involves expertise in developing and deploying software and hardware designed to handle data at scale, including high-performance computing, big data architectures (such as Hadoop and its descendants), and data-oriented programming languages and libraries.</p>
 <p>The topics associated with <span class="math inline">\(II'\)</span> are highly specific and change rapidly relative to other forms of knowledge, and so are often omitted from, or under-represented in, academic curricula, even though to many they are the <em>sine qua non</em> of data science. Abstract representation <span class="math inline">\(III´\)</span>, on the other hand, involves expertise in areas ranging from how data are to be modeled for capture and analysis to how the results of analyses are to be presented to non-expert decision-makers. These areas of knowledge strive for formal generality over the long run; they are often expressed as grammars or design languages, frequently with visual modes (such as entity-relationship models and unified modeling language UML). They also include other forms of visualization, such as the plots developed for exploratory data analysis, such as box plots, and those used to represent statistical facts and analytical results in dashboards and infographics.</p>
 </section>
-<section id="the-four-areas-plus-one" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="the-four-areas-plus-one"><span class="header-section-number">2.3</span> The Four Areas, Plus One</h2>
+<section id="the-four-areas-plus-one" class="level2">
+<h2 class="anchored" data-anchor-id="the-four-areas-plus-one">The Four Areas, Plus One</h2>
 <p>We are now ready to define and name the areas of data science expertise that emerge from an analysis of the pipeline considered as an arc. In each case, we want to identify the common context shared by the paired activities in each zone as well as the tension that exists between them by virtue of their occupying opposite sides of the pipeline. In many cases, although we can identify a shared theme in each zone’s work, the reality is that practitioners do not always interact or share disciplinary homes. One of the benefits of this model will be to identify these points of synergy and to identify new disciplinary boundaries.</p>
 <p><strong>Area I: Value</strong></p>
 <p>The area of value is defined by the relationship of data science to the world from which it draws data and into which it inserts data products. More broadly, it concerns the primary motivations of data science — why do we practice data science in the first place? It combines the traditional discipline of ethics with the professional activities of business planning, policy making, developing motivations for scientific research, and other activities that have a direct impact on people and the planet. This is the area where we determine what we do versus what we do not do, in order to maximize societal and environmental benefit and minimize harm. It is also the area that looks inward to the other data science areas and provides guidance on such issues as algorithmic bias or open science. Common activities include the forming of value propositions that initiate data science projects, research into how data is created and used “in the wild,” understanding the ethics of data acquisition, manipulation, communication, and sharing, and the application of data products in the world.</p>
@@ -266,8 +267,8 @@ div.csl-indent {
 </figure>
 </div>
 </section>
-<section id="two-principal-components" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="two-principal-components"><span class="header-section-number">2.4</span> Two Principal Components</h2>
+<section id="two-principal-components" class="level2">
+<h2 class="anchored" data-anchor-id="two-principal-components">Two Principal Components</h2>
 <p>Is there a way to understand how the four primary areas are related to each other, beyond their being composed of functions from the same pipeline? Put another way, does the pipeline-as-arc model exhibit any structural features that will help us conceptualize the broader space of data science? Two such features stand out: (1) the opposition between concrete and abstract forms of representation, and (2) between human and machine processing.</p>
 <p>Regarding the concrete and the abstract, it’s clear that the arc model has a metric quality to it: as one moves toward the pivot point of analysis, one moves away from the concrete messiness of reality as experienced to the “tidy” and abstract world of mathematics; similarly, as one moves from the pivot back to the world, there is a requirement to convert esoteric results into more humanly intelligible forms, often through a process of concretization; visualizations succeed by employing concrete metaphors that flesh out mathematical ideas that are notoriously detached from the imagination — no one can imagine, for example, n-dimensional spaces beyond a handful of dimensions. The arc describes a dialectic of abstraction and concretization that defines the ebb and flow and data science work.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -305,8 +306,8 @@ human : rational :: human : machine
 <p><strong>PC2: Concrete versus Abstract</strong></p>
 <p>The abstract-concrete axis accounts for the difference between two forms of knowledge, roughly between direct experience and the indirect representation of that experience enabled through data. Both the realm of Value and Systems involve immersion in the messy details of lived experience — and direct acquaintance with the devils in those details. This is the messy world of hacks and ironies. The realms of Design and Analysis, on the other hand, are founded on abstract representations that strive for clear and distinct purity, and which allow for deductive reasoning to succeed at the cost of simplifying assumptions and reduced representations. This is the orderly world of models. The concrete pole refers to situated knowledge, knowledge as understood by hackers and makers, but also ethnographers who seek to maximize thick description in their work. It represents <em>concrete materiality</em>. The abstract pole refers to formal knowledge, knowledge in the form of mathematical symbolism, deductive proofs, and algorithmic patterns. It is <em>abstract form</em>. Given these poles, the concrete-abstract axis is roughly the opposition between applied and pure forms of knowledge, between those that embrace materiality and those that seek purity of form.</p>
 </section>
-<section id="final-representation" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="final-representation"><span class="header-section-number">2.5</span> Final Representation</h2>
+<section id="final-representation" class="level2">
+<h2 class="anchored" data-anchor-id="final-representation">Final Representation</h2>
 <p>The result of the preceding may be represented by the following graphic.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -316,8 +317,8 @@ human : rational :: human : machine
 </div>
 <p>This visualization represents data science as composed of specific and complementary forms of knowledge. The vertical axis defines the dominant polarity between analysis — the <em>how</em> of data science, often identified entirely with it, contrasted with the <em>why</em> of data science, from which data science derives its meaning and value as a profession. The horizontal access defines the polarity of methods that are often obscured in academic definitions of data science — the supporting practices that make the Analytics component work in the first place.</p>
 </section>
-<section id="references" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="references"><span class="header-section-number">2.6</span> References</h2>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
 <div id="ref-conway2010" class="csl-entry" role="doc-biblioentry">
 Conway, Drew. 2010. <span>“The Data Science Venn Diagram.”</span> <a href="http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram">http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram</a>.
@@ -485,12 +486,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Introduction</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./concluding-remarks.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Concluding Remarks</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-title">Concluding Remarks</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
