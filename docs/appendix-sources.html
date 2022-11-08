@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.262">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Rafael C. Alvarado">
+
+<title>The 4 + 1 Model of Data Science - Appendix A — The 4+1 Model of Data Science: Appendix</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./the-four-plus-one-model.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Appendix A — The 4+1 Model of Data Science: Appendix</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">The 4 + 1 Model of Data Science</a> 
+        <div class="sidebar-tools-main">
+    <a href="" title="Share" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></a>
+    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+            <i class="bi bi-bi-twitter pe-1"></i>
+          Twitter
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://www.facebook.com/sharer/sharer.php?u=|url|">
+            <i class="bi bi-bi-facebook pe-1"></i>
+          Facebook
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
+            <i class="bi bi-bi-linkedin pe-1"></i>
+          LinkedIn
+          </a>
+        </li>
+    </ul>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./the-four-plus-one-model.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The 4+1 Model of Data Science</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Appendices</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix-sources.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">The 4+1 Model of Data Science: Appendix</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#appendix-primary-sources" id="toc-appendix-primary-sources" class="nav-link active" data-scroll-target="#appendix-primary-sources"><span class="toc-section-number">B</span>  Appendix: Primary Sources</a>
+  <ul class="collapse">
+  <li><a href="#about-the-sources" id="toc-about-the-sources" class="nav-link" data-scroll-target="#about-the-sources"><span class="toc-section-number">B.1</span>  About the sources</a></li>
+  <li><a href="#source-list" id="toc-source-list" class="nav-link" data-scroll-target="#source-list"><span class="toc-section-number">B.2</span>  Source List</a>
+  <ul class="collapse">
+  <li><a href="#tukey-on-data-analysis" id="toc-tukey-on-data-analysis" class="nav-link" data-scroll-target="#tukey-on-data-analysis"><span class="toc-section-number">B.2.1</span>  Tukey on Data Analysis</a></li>
+  <li><a href="#fayyad-on-kdd" id="toc-fayyad-on-kdd" class="nav-link" data-scroll-target="#fayyad-on-kdd"><span class="toc-section-number">B.2.2</span>  Fayyad on KDD</a></li>
+  <li><a href="#azevedo-on-semma" id="toc-azevedo-on-semma" class="nav-link" data-scroll-target="#azevedo-on-semma"><span class="toc-section-number">B.2.3</span>  Azevedo on SEMMA</a></li>
+  <li><a href="#hayashi-on-data-science" id="toc-hayashi-on-data-science" class="nav-link" data-scroll-target="#hayashi-on-data-science"><span class="toc-section-number">B.2.4</span>  Hayashi on Data Science</a></li>
+  <li><a href="#wirth-and-hipp-on-crisp-dm" id="toc-wirth-and-hipp-on-crisp-dm" class="nav-link" data-scroll-target="#wirth-and-hipp-on-crisp-dm"><span class="toc-section-number">B.2.5</span>  Wirth and Hipp on CRISP-DM</a></li>
+  <li><a href="#mason-and-wiggins-on-osemi" id="toc-mason-and-wiggins-on-osemi" class="nav-link" data-scroll-target="#mason-and-wiggins-on-osemi"><span class="toc-section-number">B.2.6</span>  Mason and Wiggins on OSEMI</a></li>
+  <li><a href="#ojeda-et-al.-on-data-science" id="toc-ojeda-et-al.-on-data-science" class="nav-link" data-scroll-target="#ojeda-et-al.-on-data-science"><span class="toc-section-number">B.2.7</span>  Ojeda, et al.&nbsp;on Data Science</a></li>
+  <li><a href="#caffo-et-al.-on-data-science" id="toc-caffo-et-al.-on-data-science" class="nav-link" data-scroll-target="#caffo-et-al.-on-data-science"><span class="toc-section-number">B.2.8</span>  Caffo, et al.&nbsp;on Data Science</a></li>
+  <li><a href="#donaho-on-data-science" id="toc-donaho-on-data-science" class="nav-link" data-scroll-target="#donaho-on-data-science"><span class="toc-section-number">B.2.9</span>  Donaho on Data Science</a></li>
+  <li><a href="#géron-on-machine-learning" id="toc-géron-on-machine-learning" class="nav-link" data-scroll-target="#géron-on-machine-learning"><span class="toc-section-number">B.2.10</span>  Géron on Machine Learning</a></li>
+  <li><a href="#das-on-data-science" id="toc-das-on-data-science" class="nav-link" data-scroll-target="#das-on-data-science"><span class="toc-section-number">B.2.11</span>  Das on Data Science</a></li>
+  <li><a href="#dataman-on-data-science" id="toc-dataman-on-data-science" class="nav-link" data-scroll-target="#dataman-on-data-science"><span class="toc-section-number">B.2.12</span>  Dataman on Data Science</a></li>
+  <li><a href="#porter-on-data-science" id="toc-porter-on-data-science" class="nav-link" data-scroll-target="#porter-on-data-science"><span class="toc-section-number">B.2.13</span>  Porter on Data Science</a></li>
+  </ul></li>
+  <li><a href="#summary-table" id="toc-summary-table" class="nav-link" data-scroll-target="#summary-table"><span class="toc-section-number">B.3</span>  Summary Table</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Appendix A — The 4+1 Model of Data Science: Appendix</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Rafael C. Alvarado </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="appendix-primary-sources" class="level1" data-number="B">
+<h1 data-number="B"><span class="header-section-number">B</span> Appendix: Primary Sources</h1>
+<section id="about-the-sources" class="level2" data-number="B.1">
+<h2 data-number="B.1" class="anchored" data-anchor-id="about-the-sources"><span class="header-section-number">B.1</span> About the sources</h2>
+<p>The materials on which the conclusions of this essay are drawn come from a variety of sources, from technical journals to blogs to internal documents. They also come from a range of viewpoints, from data analysis and statistics to data mining and data science <em>per se</em>. For the purposes of the essay, we select a more or less representative subset across these axes of variation.</p>
+<p>For each source, we list the phases cited by the authors as fundamental to data processing, broadly conceived. These are aggregated in the table that follows, aligning the specific steps with the general categories used to produce a composite pipeline. Identifiers for each source are indicated by a short string in brackets that precedes the citation and is used in the first column of the table.</p>
+<p>It should be noted that in most cases these phases are explicitly described as a process and often as a pipeline. When they are not, the implication is strong. In some cases, the process is likened to a cycle, emphasizing the connection between the endpoints of the pipeline, which is also emphasized by the 4+1 model.</p>
+<p>The twelve documents listed below begin with Tukey’s seminal essay on data analysis and end with examples of explainers of data science that have become quite frequent in recent years. Included also are the class definitions of the CRISP-DM and KDD processes which are the most developed pipeline models.</p>
+</section>
+<section id="source-list" class="level2" data-number="B.2">
+<h2 data-number="B.2" class="anchored" data-anchor-id="source-list"><span class="header-section-number">B.2</span> Source List</h2>
+<section id="tukey-on-data-analysis" class="level3" data-number="B.2.1">
+<h3 data-number="B.2.1" class="anchored" data-anchor-id="tukey-on-data-analysis"><span class="header-section-number">B.2.1</span> Tukey on Data Analysis</h3>
+<p>Key: <code>Tukey</code><br>
+Source: <span class="citation" data-cites="tukeyFutureDataAnalysis1962">Tukey (<a href="#ref-tukeyFutureDataAnalysis1962" role="doc-biblioref">1962</a>)</span> <a href="https://www.jstor.org/stable/2237638#metadata_info_tab_contents">URL</a><br>
+Field: Statistics, Data Analysis<br>
+Notes: * Distinguishes between mathematical statistics and data analysis. * Defines data analysis as: “… procedures for <strong>analyzing</strong> data, techniques for <strong>interpreting</strong> the results of such procedures, ways of <strong>planning</strong> the <strong>gathering</strong> of data to make its analysis easier, more precise or more accurate, and all the machinery and results of (mathematical) statistics which apply to analyzing data.” (p.&nbsp;2) * “Data analysis is a larger and more varied field than inference, or incisive procedures, or allocation” * Defines data analysis as a science; contrasts with mathematics, which is not <em>per se</em>. “Data analysis, and the parts of statistics which adhere to it, must then take on the characteristics of a science rather than those of mathematics …” (p.&nbsp;6) * “Data analysis, as used here, includes planning for the acquisition of data as well as working with data already obtained.” (p.&nbsp;40) * Pipeline model implicit.</p>
+<p>Model:</p>
+<ol type="1">
+<li>Planning: “ways of planning the gather of data to make its analysis easier”.</li>
+<li>Gathering: the gathering of data.<br>
+</li>
+<li>Analyzing: the analysis of data with “all the machinery and results of (mathematical) statistics”.</li>
+<li>Interpreting: “techniques for intepreting the results of” analysis.</li>
+</ol>
+</section>
+<section id="fayyad-on-kdd" class="level3" data-number="B.2.2">
+<h3 data-number="B.2.2" class="anchored" data-anchor-id="fayyad-on-kdd"><span class="header-section-number">B.2.2</span> Fayyad on KDD</h3>
+<p>Key: <code>KDD</code><br>
+Source: <span class="citation" data-cites="fayyadKnowledgeDiscoveryData1996">Fayyad et al. (<a href="#ref-fayyadKnowledgeDiscoveryData1996" role="doc-biblioref">1996</a>)</span> <a href="https://www.aaai.org/Papers/KDD/1996/KDD96-014.pdf?utm_campaign=ml4devs-newsletter&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">URL→</a><br>
+Field: Data Mining<br>
+Notes: * Summarization of prior article. * Described on p.&nbsp;84. * Most thorough, but still not complete. * “The KDD process can involve significant iteration and may contain loops between any two steps.” * Exploration takes place in the data mining step. “Data Mining is a step in the KDD process consisting of applying data analysis and discovery algorithms that, under acceptable computational efficiency limitations, produce a particular enumeration of patterns over the data ….” (p.&nbsp;83) * KDD is the process of using DM methods to extract what is deemed knowledge according to the specification of measures and thresholds, using a database along with any required preprocessing, sub sampling, and transformation of the database.</p>
+<p>Steps:</p>
+<p>Short version</p>
+<ol type="1">
+<li>Selection: Creating a target data set, or focusing on a subset of variables or data samples, on which discovery is to be performed.</li>
+<li>Pre-processing: Cleaning and pre processing the data in order to obtain consistent data.</li>
+<li>Transformation: Transformation of the data using dimensionality reduction and other methods.</li>
+<li>Data Mining: Searching for patterns of interest in a particular representational form, depending on the DM objective (usually, prediction).</li>
+<li>Interpretation/Evaluation: Interpretation and evaluation of the mined patterns.</li>
+</ol>
+<p>Long version (derived from from Brachman &amp; Anand 1996)</p>
+<ol type="1">
+<li><strong>Understanding</strong>: “Developing an understanding of the application domain and the relevant prior knowledge, and identifying the goal of the KDD process from the customer’s viewpoint.”</li>
+<li><strong>Creating</strong>: “Creating a target data set: selecting a data set, or focusing on a subset of variables or data samples, on which discovery is to be performed.”</li>
+<li><strong>Cleaning</strong>: “Data cleaning and preprocessing: basic operations such as the removal of noise if appropriate, collecting the necessary information to model or account for noise, deciding on strategies for handling missing data fields, accounting for time sequence information and known changes.”</li>
+<li><strong>Reduction and projection</strong>: “Data reduction and projection: finding usefull features to represent the data depending on the goal of the task. Using dimensionality reduction or transformation methods to reduce the effective number of variables under consideration or to find invariant representations for the data.”</li>
+<li><strong>Method selction</strong>: “Matching the goals of the KDD process (step 1) to particular data mining <em>method</em>: e.g., summarization, classification, regression, clustering, etc.”</li>
+<li><strong>Model selection</strong>: “Choosing the data mining algorithm(s): selecting method(s) to be used for searching for patterns the data. This includes deciding which models and parameters maybe appropriate (e.g.&nbsp;models for categorical data are different than models on vectors over the reals) and matching a particular data mining methodwith the overall criteria of the KDDprocess (e.g., the end-user maybe more interested in understanding the model than its predictive capabilities …).”</li>
+<li><strong>Data mining</strong>: “Data mining: searching for patterns of interest in a particular representational form or a set of such representations: classification rules or trees, regression, clustering, and so forth.”</li>
+<li><strong>Interpreting</strong>: “Interpreting mined patterns, possibly return to any of steps 1-7 for further iteration. This step can also involve visualization of the extracted patterns/models, or visualization of the data given the extracted models.”</li>
+<li><strong>Consolidating</strong>: “Consolidating discovered knowledge: incorporating this knowledge into another system for further action, or simply documenting it and reporting it to interested parties. This also includes checking for and resolving potential conflicts with prreviously believed (or extracted) knowledge.”</li>
+</ol>
+<!--
+NOT SURE where this came from ...
+1. Frame
+1. Collect  
+1. Explore  
+1. Process          
+1. Analyze      
+1. Communicate       
+-->
+</section>
+<section id="azevedo-on-semma" class="level3" data-number="B.2.3">
+<h3 data-number="B.2.3" class="anchored" data-anchor-id="azevedo-on-semma"><span class="header-section-number">B.2.3</span> Azevedo on SEMMA</h3>
+<p>Key: <code>SEMMA</code> &nbsp; Source: <span class="citation" data-cites="azevedoKDDSEMMACRISPDM2008">Azevedo and Santos (<a href="#ref-azevedoKDDSEMMACRISPDM2008" role="doc-biblioref">2008</a>)</span> Field: Statistics</p>
+<p>Notes: * Developed by SAS institute in 1996 (source?). * Although developed for SAS Enterprise Miner, widely referenced as a model, especially in comparison to KDD and CRISP-DM. Bias towards statistis and to the SAS product is evident in the first step. * Descriptions are derived from Azevedo, et al.&nbsp;2008.</p>
+<p>Steps: 1. Sample: Sampling the data by extracting a portion of a large data set big enough to contain the significant information, yet small enough to manipulate quickly. 2. Explore: Exploration of the data by searching for unanticipated trends and anomalies in order to gain understanding and ideas 3. Modify: Modification of the data by creating, selecting, and transforming the variables to focus the model selection process 4. Model: Modeling the data by allowing the software to search automatically for a combination of data that reliably predicts a desired outcome. 5. Assess: Assessing the data by evaluating the usefulness and reliability of the findings from the DM process and estimate how well it performs.</p>
+</section>
+<section id="hayashi-on-data-science" class="level3" data-number="B.2.4">
+<h3 data-number="B.2.4" class="anchored" data-anchor-id="hayashi-on-data-science"><span class="header-section-number">B.2.4</span> Hayashi on Data Science</h3>
+<p>Key: <code>Hayashi</code> Source: <span class="citation" data-cites="hayashiDataScienceClassification1998">Hayashi et al. (<a href="#ref-hayashiDataScienceClassification1998" role="doc-biblioref">1998</a>)</span> <a href="https://link.springer.com/chapter/10.1007/978-4-431-65950-1_3">URL→</a><br>
+Field: Statistics</p>
+<p>Notes:</p>
+<ul>
+<li>Hayashi adopted the term “data science” in the early 1990s to define a field that did not succumb to what he saw to be the errors of both statistics and data analysis. He felt that mathematical statistics had become too attached to problems of inference and removed from reality, while data analysis had lost interest in understanding the meaning of the data it deals with.</li>
+<li>“Data Science consists of three phases: design for data, collection of data and analysis on data. It is important that the three phases are treated with the concept of unification based on the fundamental philosophy of science …. In these phases the methods which are fitted for the object and are valid, must be studied with a good perspective.” (p.&nbsp;41)</li>
+<li>Critical of both statistics and data analysis.</li>
+<li>Viewed the pipeline as a spiral of diversification and simplification.</li>
+<li>Hard and soft results.</li>
+</ul>
+<p>Steps:</p>
+<ol type="1">
+<li>Design: Surveys and experiments are developed to capture data from “multifarious phenomena”.</li>
+<li>Collection: Phenomena are expressed as multidimensional or time-series data; properties of the data are made clear. At this stage, data are too complicated to draw clear conclusions. (Representation)</li>
+<li>Analysis: By methods of classification, multidimensional data analysis, and statistics, data structure is revealed. Simplification and conceptualization. Also yields understanding of deviations of the model, which begins the cycle anew. (Revelation)</li>
+</ol>
+</section>
+<section id="wirth-and-hipp-on-crisp-dm" class="level3" data-number="B.2.5">
+<h3 data-number="B.2.5" class="anchored" data-anchor-id="wirth-and-hipp-on-crisp-dm"><span class="header-section-number">B.2.5</span> Wirth and Hipp on CRISP-DM</h3>
+<p>Key: <code>CRISPDM</code> Source: <span class="citation" data-cites="wirthCRISPDMStandardProcess1999">Wirth and Hipp (<a href="#ref-wirthCRISPDMStandardProcess1999" role="doc-biblioref">1999</a>)</span> <a href="http://www.cs.unibo.it/~danilo.montesi/CBD/Beatriz/10.1.1.198.5133.pdf">URL→</a><br>
+Field: Data Mining</p>
+<p>Notes:</p>
+<ul>
+<li>“At the top level, the data mining process is organized into a small number of phases. Each phase consists of several second-level generic tasks.”</li>
+<li>The process is cyclic and recursive.</li>
+</ul>
+<p>Steps:</p>
+<ol type="1">
+<li>Business Understanding: Understanding project objectives and requirements from a business perspective. Development of a plan.</li>
+<li>Data Understanding: Initial data collection and activities to get familiar with the data, e.g.&nbsp;to identify data quality problems, to discover first insights into the data, or to detect interesting subsets to form hypotheses for hidden information. This is really two phases, which are combined because of their close relationship: <em>Collection</em> and <em>Exploration</em>.</li>
+<li>Data Preparation: Construction of the final dataset. Tasks include table, record, an attribute selection, data cleaning, construction of new attributes, and transformation of data for modeling tools.</li>
+<li>Modeling: Modeling techniques selected and applied, parameters calibrated.</li>
+<li>Evaluation At this stage in the project you have built one or more models that appear to have high quality, from a data analysis perspective. Before proceeding to final deployment of the model, it is important to more thoroughly evaluate the model, and review the steps executed to construct the model, to be certain it properly achieves the business objectives. A key objective is to determine if there is some important business issue that has not been sufficiently considered. At the end of this phase, a decision on the use of the data mining results should be reached.</li>
+<li>Deployment: Creation of the model is generally not the end of the project. Usually, the knowledge gained will need to be organized and presented in a way that the customer can use it. Depending on the requirements, the deployment phase can be as simple as generating a report or as complex as implementing a repeatable data mining process. In many cases it will be the user, not the data analyst, who will carry out the deployment steps. In any case, it is important to understand up front what actions will need to be carried out in order to actually make use of the created models.</li>
+</ol>
+</section>
+<section id="mason-and-wiggins-on-osemi" class="level3" data-number="B.2.6">
+<h3 data-number="B.2.6" class="anchored" data-anchor-id="mason-and-wiggins-on-osemi"><span class="header-section-number">B.2.6</span> Mason and Wiggins on OSEMI</h3>
+<p>Key: <code>OSEMI</code> Source: <span class="citation" data-cites="masonTaxonomyDataScience2010">Mason and Wiggins (<a href="#ref-masonTaxonomyDataScience2010" role="doc-biblioref">2010</a>)</span> <a href="https://sites.google.com/a/isim.net.in/datascience_isim/taxonomy">URL→</a><br>
+Field: Data Science</p>
+<p>Notes: * Assumes context of web, available data. * Borrowed language from <a href="https://towardsdatascience.com/5-steps-of-a-data-science-project-lifecycle-26c50372b492">5 Steps of a Data Science Project Lifecycle</a>.</p>
+<p>Steps:</p>
+<ol type="1">
+<li>Obtain: Gather data from relevant sources through APIs, web scraping, etc.</li>
+<li>Scrub: Clean data and convert to machine readable formats. Clearning includes handling missing data, inconsistent labels, or awkward formatting; stripping extraneous characters; normalizing values, etc.</li>
+<li>Explore: Find significan patterns and trends using statistical and data analytic methods, These include visualizing, clustering, performing dimensionality reduction.</li>
+<li>Model: Construct methods to predict and forecast.</li>
+<li>Interpret: Put the results to good use.</li>
+</ol>
+</section>
+<section id="ojeda-et-al.-on-data-science" class="level3" data-number="B.2.7">
+<h3 data-number="B.2.7" class="anchored" data-anchor-id="ojeda-et-al.-on-data-science"><span class="header-section-number">B.2.7</span> Ojeda, et al.&nbsp;on Data Science</h3>
+<p>Key: <code>Ojeda+</code> Source: <span class="citation" data-cites="ojedaPracticalDataScience2014">Ojeda et al. (<a href="#ref-ojedaPracticalDataScience2014" role="doc-biblioref">2014</a>)</span> <a href="https://www.packtpub.com/product/practical-data-science-cookbook-second-edition/9781787129627">URL→</a><br>
+Field: Data Science</p>
+<!--
+![](images/image_01_001.png)
+-->
+<ol type="1">
+<li>Acquisition: The first step in the pipeline is to acquire the data from a variety of sources, including relational databases, NoSQL and document stores, web scraping, and distributed databases such as HDFS on a Hadoop platform, RESTful APIs, flat files, and hopefully this is not the case, PDFs.</li>
+<li>Exploration and understanding: The second step is to come to an understanding of the data that you will use and how it was collected; this often requires significant exploration.</li>
+<li>Munging, wrangling, and manipulation: This step is often the single most time-consuming and important step in the pipeline. Data is almost never in the needed form for the desired analysis.</li>
+<li>Analysis and modeling: This is the fun part where the data scientist gets to explore the statistical relationships between the variables in the data and pulls out his or her bag of machine learning tricks to cluster, categorize, or classify the data and create predictive models to see into the future.</li>
+<li>Communicating and operationalizing: At the end of the pipeline, we need to give the data back in a compelling form and structure, sometimes to ourselves to inform the next iteration, and sometimes to a completely different audience. The data products produced can be a simple one-off report or a scalable web product that will be used interactively by millions.</li>
+</ol>
+<!--
+1. Acquire      
+2. Explore  
+3. Wrangle      
+4. Analyze
+5. Communicate  
+6. Operationalize
+-->
+</section>
+<section id="caffo-et-al.-on-data-science" class="level3" data-number="B.2.8">
+<h3 data-number="B.2.8" class="anchored" data-anchor-id="caffo-et-al.-on-data-science"><span class="header-section-number">B.2.8</span> Caffo, et al.&nbsp;on Data Science</h3>
+<p>Key: <code>Caffo+</code> Source: <span class="citation" data-cites="caffoExecutiveDataScience2015">Caffo, Peng, and Leek (<a href="#ref-caffoExecutiveDataScience2015" role="doc-biblioref">2015</a>)</span> <a href="https://leanpub.com/eds">URL→</a><br>
+Field: Data Science</p>
+<ol type="1">
+<li>Question<br>
+</li>
+<li>Get<br>
+</li>
+<li>Explore<br>
+</li>
+<li>Model<br>
+</li>
+<li>Interpret<br>
+</li>
+<li>Communicate</li>
+</ol>
+</section>
+<section id="donaho-on-data-science" class="level3" data-number="B.2.9">
+<h3 data-number="B.2.9" class="anchored" data-anchor-id="donaho-on-data-science"><span class="header-section-number">B.2.9</span> Donaho on Data Science</h3>
+<p>Key: <code>Donoho</code> Source: <span class="citation" data-cites="donoho50YearsData2017">Donoho (<a href="#ref-donoho50YearsData2017" role="doc-biblioref">2017</a>)</span> <a href="https://doi.org/10.1080/10618600.2017.1384734">URL→</a></p>
+<p>Field: Statistics</p>
+<ol type="1">
+<li>Gather</li>
+<li>Prepare</li>
+<li>Explore</li>
+<li>Represent and transform</li>
+<li>Compute<br>
+</li>
+<li>Model<br>
+</li>
+<li>Present<br>
+</li>
+<li>Meta</li>
+</ol>
+</section>
+<section id="géron-on-machine-learning" class="level3" data-number="B.2.10">
+<h3 data-number="B.2.10" class="anchored" data-anchor-id="géron-on-machine-learning"><span class="header-section-number">B.2.10</span> Géron on Machine Learning</h3>
+<p>Key: <code>Géron</code> Source: <span class="citation" data-cites="geronHandsOnMachineLearning2017">Géron (<a href="#ref-geronHandsOnMachineLearning2017" role="doc-biblioref">2017</a>)</span> <a href="https://www.investincotedor.fr/sites/default/files/webform/pdf-hands-on-machine-learning-with-scikit-learn-and-tensorflow-conce-aurlien-gron-pdf-download-free-book-21c7262.pdf">URL→</a><br>
+Field: Data Science</p>
+<ol type="1">
+<li>Big picture<br>
+</li>
+<li>Get<br>
+</li>
+<li>Clean<br>
+</li>
+<li>Discover</li>
+<li>Prepare Model</li>
+<li>Fine tune<br>
+</li>
+<li>Launch</li>
+</ol>
+</section>
+<section id="das-on-data-science" class="level3" data-number="B.2.11">
+<h3 data-number="B.2.11" class="anchored" data-anchor-id="das-on-data-science"><span class="header-section-number">B.2.11</span> Das on Data Science</h3>
+<p>Key: <code>Das</code> Source: <span class="citation" data-cites="dasDataScienceLife2019">Das (<a href="#ref-dasDataScienceLife2019" role="doc-biblioref">2019</a>)</span> <a href="https://towardsdatascience.com/data-science-life-cycle-101-for-dummies-like-me-e66b47ad8d8f">URL→</a><br>
+Field: Data Science</p>
+<ol type="1">
+<li>Understand</li>
+<li>Mine</li>
+<li>Clean</li>
+<li>Explore</li>
+<li>Features</li>
+<li>Model</li>
+<li>Visualize</li>
+</ol>
+</section>
+<section id="dataman-on-data-science" class="level3" data-number="B.2.12">
+<h3 data-number="B.2.12" class="anchored" data-anchor-id="dataman-on-data-science"><span class="header-section-number">B.2.12</span> Dataman on Data Science</h3>
+<p>Key: <code>Dataman</code> Source: <span class="citation" data-cites="datamanDataScienceModeling2020">Dataman (<a href="#ref-datamanDataScienceModeling2020" role="doc-biblioref">2020</a>)</span> <a href="https://towardsdatascience.com/data-science-modeling-process-fa6e8e45bf02">URL→</a><br>
+Field: Data Science</p>
+<ol type="1">
+<li>Business</li>
+<li>Data requirements<br>
+</li>
+<li>Collection</li>
+<li>EDA</li>
+<li>Modeling</li>
+<li>Evaluation</li>
+<li>Deployment</li>
+<li>Monitoring</li>
+</ol>
+</section>
+<section id="porter-on-data-science" class="level3" data-number="B.2.13">
+<h3 data-number="B.2.13" class="anchored" data-anchor-id="porter-on-data-science"><span class="header-section-number">B.2.13</span> Porter on Data Science</h3>
+<p>Key: <code>Porter</code> Source: <span class="citation" data-cites="porterFrameworkDataScience2020">Porter (<a href="#ref-porterFrameworkDataScience2020" role="doc-biblioref">2020</a>)</span> Field: Statistics <!--
+file:///private/var/folders/14/rnyfspnx2q131jp_752t9fc80000gn/T/com.microsoft.Outlook/Outlook%20Temp/data-science%5B44%5D.html#categories_of_data_science
+--></p>
+<ol type="1">
+<li>Collect<br>
+</li>
+<li>Store and represent<br>
+</li>
+<li>Manipulation<br>
+</li>
+<li>Computing<br>
+</li>
+<li>Analytics<br>
+</li>
+<li>Communicate<br>
+</li>
+<li>Practice</li>
+<li>Disciplinary</li>
+</ol>
+</section>
+</section>
+<section id="summary-table" class="level2" data-number="B.3">
+<h2 data-number="B.3" class="anchored" data-anchor-id="summary-table"><span class="header-section-number">B.3</span> Summary Table</h2>
+
+<table class="dataframe table table-sm table-striped" id="pipelines">
+<thead>
+<tr>
+<th>
+&nbsp;
+</th>
+<th>
+Understand
+</th>
+<th>
+Plan
+</th>
+<th>
+Collect
+</th>
+<th>
+Store
+</th>
+<th>
+Clean
+</th>
+<th>
+Explore
+</th>
+<th>
+Prepare
+</th>
+<th>
+Model
+</th>
+<th>
+Interpret
+</th>
+<th>
+Communicate
+</th>
+<th>
+Deploy
+</th>
+<th>
+Reflect
+</th>
+</tr>
+</thead>
+<tbody>
+<!-- Tukey -->
+<tr>
+<th>
+Tukey
+</th>
+<td>
+&nbsp;
+</td>
+<td>
+Plan
+</td>
+<td>
+Gather
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Analyze
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Interpret
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<!-- KDD -->
+<!--
+<tr>
+    <th>KDD</th>
+    <td>Understanding</td>
+    <td>&nbsp;</td>
+    <td>Creating</td>
+    <td>&nbsp;</td>
+    <td>Cleaning</td>
+    <td>&nbsp;</td>
+    <td>Reduction and projection</td>
+    <td>Method and model selction; data mining</td>
+    <td>Interpreting</td>
+    <td>Consolidating</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+-->
+<tr>
+<th>
+KDD
+</th>
+<td>
+</td>
+<td>
+</td>
+<td>
+Selection
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Preprocessing
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Transformation
+</td>
+<td>
+Data mining
+</td>
+<td>
+Interpreting
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<!-- KDD2 --> <!--
+  <tr>
+    <th>KDD2</th>
+    <td>Frame</td>
+    <td>&nbsp;</td>
+    <td>Collect</td>
+    <td>Explore</td>
+    <td>Process</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>Analyze</td>
+    <td>&nbsp;</td>
+    <td>Communicate</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  --> <!-- SEMMA -->
+<tr>
+<th>
+SEMMA
+</th>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Sample
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Explore
+</td>
+<td>
+Modify
+</td>
+<td>
+Model
+</td>
+<td>
+Assess
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<!-- Hayashi -->
+<tr>
+<th>
+Hayashi
+</th>
+<td>
+Design
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Collect
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Analyze
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<!-- CRISPDM -->
+<tr>
+<th>
+CRISPDM
+</th>
+<td>
+Business
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Collect
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Explore
+</td>
+<td>
+Preparation
+</td>
+<td>
+Modeling
+</td>
+<td>
+Evaluation
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Deployment
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<!-- OSEMI -->
+<tr>
+<th>
+OSEMI
+</th>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Obtain
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Scrub
+</td>
+<td>
+Explore
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Model
+</td>
+<td>
+Interpret
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<!-- Ojeda+ -->
+<tr>
+<th>
+Ojeda+
+</th>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Acquire
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+</td>
+<td>
+Explore and understand
+</td>
+<td>
+Wrangle
+</td>
+<td>
+Analyze and model
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Communicate
+</td>
+<td>
+Operationalize
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<!-- Caffo+ -->
+<tr>
+<th>
+Caffo+
+</th>
+<td>
+Question
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Get
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Explore
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Model
+</td>
+<td>
+Interpret
+</td>
+<td>
+Communicate
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<!-- Donaho -->
+<tr>
+<th>
+Donaho
+</th>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Gather
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Prepare
+</td>
+<td>
+Explore
+</td>
+<td>
+Represent and transform; Compute
+</td>
+<td>
+Model
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Present
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Meta
+</td>
+</tr>
+<!-- Géron -->
+<tr>
+<th>
+Géron
+</th>
+<td>
+Big picture
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Get
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Clean
+</td>
+<td>
+Discover
+</td>
+<td>
+Prepare
+</td>
+<td>
+Model; Fine tune
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Launch
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<!-- Das -->
+<tr>
+<th>
+Das
+</th>
+<td>
+Understand
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Mine
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Clean
+</td>
+<td>
+Explore
+</td>
+<td>
+Features
+</td>
+<td>
+Model
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Visualize
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<!-- Dataman -->
+<tr>
+<th>
+Dataman
+</th>
+<td>
+Business
+</td>
+<td>
+Data requirements
+</td>
+<td>
+Collection
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+EDA
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Modeling
+</td>
+<td>
+Evaluation
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Deployment; Monitoring
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<!-- Porter -->
+<tr>
+<th>
+Porter
+</th>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Collect
+</td>
+<td>
+Store and represent
+</td>
+<td>
+Manipulation
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Computing
+</td>
+<td>
+Analytics
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Communicate
+</td>
+<td>
+Practice
+</td>
+<td>
+Disciplinary
+</td>
+</tr>
+</tbody>
+
+</table>
+<pre class="{bibliography}"><code></code></pre>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-azevedoKDDSEMMACRISPDM2008" class="csl-entry" role="doc-biblioentry">
+Azevedo, Ana Isabel Rojão Lourenço, and Manuel Filipe Santos. 2008. <span>“<span>KDD</span>, <span>SEMMA</span> and <span>CRISP-DM</span>: A Parallel Overview.”</span> <em>IADS-DM</em>.
+</div>
+<div id="ref-caffoExecutiveDataScience2015" class="csl-entry" role="doc-biblioentry">
+Caffo, Brian, Roger D. Peng, and Jeffrey Leek. 2015. <em>Executive <span>Data Science</span></em>. <span>Leanpub</span>.
+</div>
+<div id="ref-dasDataScienceLife2019" class="csl-entry" role="doc-biblioentry">
+Das, Sangeet Moy. 2019. <span>“Data <span>Science Life Cycle</span> 101 for <span>Dummies</span> Like <span>Me</span>.”</span> <em>Medium</em>. https://towardsdatascience.com/data-science-life-cycle-101-for-dummies-like-me-e66b47ad8d8f.
+</div>
+<div id="ref-datamanDataScienceModeling2020" class="csl-entry" role="doc-biblioentry">
+Dataman, Dr. 2020. <span>“Data <span>Science Modeling Process</span> &amp; <span>Six Consultative Roles</span>.”</span> <em>Medium</em>. https://towardsdatascience.com/data-science-modeling-process-fa6e8e45bf02.
+</div>
+<div id="ref-donoho50YearsData2017" class="csl-entry" role="doc-biblioentry">
+Donoho, David. 2017. <span>“50 <span>Years</span> of <span>Data Science</span>.”</span> <em>Journal of Computational and Graphical Statistics</em> 26 (4): 745–66. <a href="https://doi.org/10.1080/10618600.2017.1384734">https://doi.org/10.1080/10618600.2017.1384734</a>.
+</div>
+<div id="ref-fayyadKnowledgeDiscoveryData1996" class="csl-entry" role="doc-biblioentry">
+Fayyad, Usama M, Gregory Piatetsky-Shapiro, Padhraic Smyth, et al. 1996. <span>“Knowledge <span>Discovery</span> and <span>Data Mining</span>: <span>Towards</span> a <span>Unifying Framework</span>.”</span> In <em><span>KDD</span></em>, 96:82–88.
+</div>
+<div id="ref-geronHandsOnMachineLearning2017" class="csl-entry" role="doc-biblioentry">
+Géron, Aurélien. 2017. <em>Hands-<span>On Machine Learning</span> with <span>Scikit-Learn</span> and <span>TensorFlow</span>: <span>Concepts</span>, <span>Tools</span>, and <span>Techniques</span> to <span>Build Intelligent Systems</span></em>. 1 edition. <span>Beijing ; Boston</span>: <span>O’Reilly Media</span>.
+</div>
+<div id="ref-hayashiDataScienceClassification1998" class="csl-entry" role="doc-biblioentry">
+Hayashi, Chikio, Keiji Yajima, Hans H. Bock, Noboru Ohsumi, Yutaka Tanaka, and Yasumasa Baba, eds. 1998. <em>Data <span>Science</span>, <span>Classification</span>, and <span>Related Methods</span>: <span>Proceedings</span> of the <span>Fifth Conference</span> of the <span>International Federation</span> of <span>Classification Societies</span> (<span>IFCS-96</span>), <span>Kobe</span>, <span>Japan</span>, <span>March</span> 27, 1996</em>. Studies in <span>Classification</span>, <span>Data Analysis</span>, and <span>Knowledge Organization</span>. <span>Springer Japan</span>. <a href="https://doi.org/10.1007/978-4-431-65950-1">https://doi.org/10.1007/978-4-431-65950-1</a>.
+</div>
+<div id="ref-masonTaxonomyDataScience2010" class="csl-entry" role="doc-biblioentry">
+Mason, Hilary, and Christopher Wiggins. 2010. <span>“A <span>Taxonomy</span> of <span>Data Science</span>.”</span> <em>Dataists</em>.
+</div>
+<div id="ref-ojedaPracticalDataScience2014" class="csl-entry" role="doc-biblioentry">
+Ojeda, Tony, Sean Patrick Murphy, Benjamin Bengfort, and Abhijit Dasgupta. 2014. <em>Practical <span>Data Science Cookbook</span></em>. <span>Packt Publishing Ltd</span>.
+</div>
+<div id="ref-porterFrameworkDataScience2020" class="csl-entry" role="doc-biblioentry">
+Porter, Michael D. 2020. <span>“A <span>Framework</span> for <span>Data Science</span>.”</span>
+</div>
+<div id="ref-tukeyFutureDataAnalysis1962" class="csl-entry" role="doc-biblioentry">
+Tukey, John W. 1962. <span>“The <span>Future</span> of <span>Data Analysis</span>.”</span> <em>The Annals of Mathematical Statistics</em> 33 (1): 1–67.
+</div>
+<div id="ref-wirthCRISPDMStandardProcess1999" class="csl-entry" role="doc-biblioentry">
+Wirth, Rüdiger, and Jochen Hipp. 1999. <span>“<span>CRISP-DM</span>: <span>Towards</span> a <span>Standard Process Model</span> for <span>Data Mining</span>.”</span>
+</div>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./the-four-plus-one-model.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The 4+1 Model of Data Science</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
