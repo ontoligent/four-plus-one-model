@@ -1,0 +1,24 @@
+project:
+  type: book
+  output-dir: docs
+  
+book:
+  title: "The 4 + 1 Model of Data Science"
+  author: "Rafael C. Alvarado"
+  # cover-image: images/cover.png
+  # site-url: 
+  # repo-url: 
+  # repo-branch: master
+  # repo-actions: [edit]
+  sharing: [twitter, facebook, linkedin]
+  chapters:
+    - index.qmd
+    - the-four-plus-one-model.qmd
+  appendices:
+    - appendix-sources.qmd
+
+format:
+  html: 
+    theme: cosmo
+    cover-image: cover.png
+    code-link: true
