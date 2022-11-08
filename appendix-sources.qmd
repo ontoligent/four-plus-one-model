@@ -1,14 +1,10 @@
 ---
 title: "The 4+1 Model of Data Science: Appendix"
-author: "Rafael C. Alvarado"
-affiliation: School of Data Science, University of Virginia
 format: html
 editor: visual
 link-citations: true
 bibliography: HistoryDataScience.bib
 ---
-
-# Appendix: Primary Sources
 
 ## About the sources
 

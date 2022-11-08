@@ -8,25 +8,9 @@ link-citations: true
 bibliography: references.bib
 ---
 
-## Introduction
-
-Data Science is a complex and evolving field, but most agree that it can be defined as the intersection of computer science and technology, math and statistics, and domain knowledge, with the purpose of extracting knowledge and value from data. Many also associate it with a series of practical activities ranging from the cleaning and "wrangling" of data, to its analysis and use to infer models, to the visual and rhetorical representation of results to stakeholders and decision-makers.
-
-This essay proposes a model of data science that is intended to go beyond the laundry-list definitions that dominate the discourse in the field today. Although these are not inaccurate, they do not get at the specific nature of data science or help distinguish it from adjacent fields such as computer science and statistics --- fields whose members sometimes claim to already be doing data science. Without a clear understanding of data science the field is subject to counterproductive turf battles in the academy as well as confusion in the workplace.[^1]
-
-[^1]: It is increasingly the case that hiring managers in industry understand the role of data scientist differently than the academic programs that produce data scientists. One result of this is the proliferation of terms such as data engineer, machine learning engineer, and applied AI to define areas of work that have historically belonged to data science. Another result is the confusion of data scientist with the roles of data analyst and statistician.
-
-<!-- Transition? -->
-
-We define data science in terms of a multi-part model that represents core areas of expertise in the field and how they are related to each other. These are the areas of **value**, **design**, **systems**, and **analytics**. A fifth area, **practice**, integrates the other four in specific contexts. Together, these areas belong to every data science project, even if they are often unconnected and siloed in the academy.
-
-Unlike traditional academic disciplines, each area of the proposed model is inherently interdisciplinary, bringing together diverse and sometimes contrary perspectives under a common heading. The inherently interdisciplinary and pluralist nature of these areas is a distinctive feature of data science and a key differentiator between it and traditional disciplines.
-
-The following describes how this model is derived and provides clues about how to interpret and apply the model to your own situation.
-
 ## A Common Theme: The Image of the Pipeline
 
-A review of the literature of data science definitions, from sources attempting to define the field explicitly, as well as from self-definitions from adjacent fields such as data analysis and data mining, reveals that most definitions invoke the image of a data processing pipeline --- a sequence of actions through which data flows as it moves from the consumption of so-called raw data to production of actionable results. Consumed data may come from a variety of sources --- databases or intentional experiments or sensors. Results may be equally various, from the communication of analytical results to stake-holders to the development of a data product for use on the web. For a detailed review of these sources, see the [Appendix](pipeline-sources.md).[^2]
+A review of the literature of data science definitions, from sources attempting to define the field explicitly, as well as from self-definitions from adjacent fields such as data analysis and data mining, reveals that most definitions invoke the image of a data processing pipeline --- a sequence of actions through which data flows as it moves from the consumption of so-called raw data to production of actionable results. Consumed data may come from a variety of sources --- databases or intentional experiments or sensors. Results may be equally various, from the communication of analytical results to stake-holders to the development of a data product for use on the web. For a detailed review of these sources, see the [Appendix](appendix-sources.qmd).[^2]
 
 [^2]: The idea that this pipeline is fundamental to data science is not new --- in the 1990s, data mining was conceptualized as a pipeline with the SEMMA and CRISP-DM models that are widely adopted by data scientists today in one form or another, such as Mason and Wiggins' OSEMI model [@azevedo2008; @mason2010]. In fact, the image goes back at least to the early 1960s, when the Data Sciences Laboratory of the U.S. Air Force was created to address the fact that "\[m\]odern data processing and computing machinery, together with improved communications, has made it possible to \*ask for\*, \*collect, process and use\* astronomical amounts of detailed data" [@afcrl1963: 187, emphasis added]. More recently, Donoho's "50 Years of Data Science" proposes a framework for the field based on a sequence of six divisions that follow the structure of a pipeline [@donoho2017].
 

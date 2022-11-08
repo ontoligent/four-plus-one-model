@@ -1,1 +1,16 @@
 ## Introduction
+
+Data Science is a complex and evolving field, but most agree that it can be defined as the intersection of computer science and technology, math and statistics, and domain knowledge, with the purpose of extracting knowledge and value from data. Many also associate it with a series of practical activities ranging from the cleaning and "wrangling" of data, to its analysis and use to infer models, to the visual and rhetorical representation of results to stakeholders and decision-makers.
+
+This essay proposes a model of data science that is intended to go beyond the laundry-list definitions that dominate the discourse in the field today. Although these are not inaccurate, they do not get at the specific nature of data science or help distinguish it from adjacent fields such as computer science and statistics --- fields whose members sometimes claim to already be doing data science. Without a clear understanding of data science the field is subject to counterproductive turf battles in the academy as well as confusion in the workplace.[^1]
+
+[^1]: It is increasingly the case that hiring managers in industry understand the role of data scientist differently than the academic programs that produce data scientists. One result of this is the proliferation of terms such as data engineer, machine learning engineer, and applied AI to define areas of work that have historically belonged to data science. Another result is the confusion of data scientist with the roles of data analyst and statistician.
+
+<!-- Transition? -->
+
+We define data science in terms of a multi-part model that represents core areas of expertise in the field and how they are related to each other. These are the areas of **value**, **design**, **systems**, and **analytics**. A fifth area, **practice**, integrates the other four in specific contexts. Together, these areas belong to every data science project, even if they are often unconnected and siloed in the academy.
+
+Unlike traditional academic disciplines, each area of the proposed model is inherently interdisciplinary, bringing together diverse and sometimes contrary perspectives under a common heading. The inherently interdisciplinary and pluralist nature of these areas is a distinctive feature of data science and a key differentiator between it and traditional disciplines.
+
+The following describes how this model is derived and provides clues about how to interpret and apply the model to your own situation.
+
