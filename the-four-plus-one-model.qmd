@@ -1,29 +1,14 @@
 ---
-title: "The 4+1 Model of Data Science"
-author: "Rafael C. Alvarado"
-affiliation: School of Data Science, University of Virginia
+title: "The Image of the Pipeline"
 format: html
 editor: visual
 link-citations: true
 bibliography: references.bib
 ---
 
-## A Common Theme: The Image of the Pipeline
+## A Common Theme
 
-A review of the literature of data science definitions, from sources attempting to define the field explicitly, as well as from self-definitions from adjacent fields such as data analysis and data mining, reveals that most definitions invoke the image of a data processing pipeline --- a sequence of actions through which data flows as it moves from the consumption of so-called raw data to production of actionable results. Consumed data may come from a variety of sources --- databases or intentional experiments or sensors. Results may be equally various, from the communication of analytical results to stake-holders to the development of a data product for use on the web. For a detailed review of these sources, see the [Appendix](appendix-sources.qmd).[^2]
-
-[^2]: The idea that this pipeline is fundamental to data science is not new --- in the 1990s, data mining was conceptualized as a pipeline with the SEMMA and CRISP-DM models that are widely adopted by data scientists today in one form or another, such as Mason and Wiggins' OSEMI model [@azevedo2008; @mason2010]. In fact, the image goes back at least to the early 1960s, when the Data Sciences Laboratory of the U.S. Air Force was created to address the fact that "\[m\]odern data processing and computing machinery, together with improved communications, has made it possible to \*ask for\*, \*collect, process and use\* astronomical amounts of detailed data" [@afcrl1963: 187, emphasis added]. More recently, Donoho's "50 Years of Data Science" proposes a framework for the field based on a sequence of six divisions that follow the structure of a pipeline [@donoho2017].
-
-```{=html}
-<!--#
-Insert here the approach of looking the pipelines as a trope, a kind of narrative, and therefore subject to literary analysis. 
-
-Viewed in this way, these pipeline narratives have an obvious chiasmatic structure. 
-
-They also have a three-part structure that is common to most stories -- a beginning, middle, and end. This structure is more useful than it looks: 
--->
-```
-### A Common Sequence
+A review of the literature of data science definitions, from sources attempting to define the field explicitly, as well as from self-definitions from adjacent fields such as data analysis and data mining, reveals that most definitions invoke the image of a data processing pipeline --- a sequence of actions through which data flows as it moves from the consumption of so-called raw data to production of actionable results. Consumed data may come from a variety of sources --- databases or intentional experiments or sensors. Results may be equally various, from the communication of analytical results to stake-holders to the development of a data product for use on the web. For a detailed review of these sources, see the [Appendix](appendix-sources.qmd).
 
 An analysis of a representative sample of essays that define a data processing pipeline shows that the various stories consist of elements drawn from a standard sequence of about twelve elements, give or take a few, depending on how one might expand or contract terms. These may signified by a core set of verbs or event types (which narratologists call functions), with the understanding that many synonyms are employed in the examples:
 
@@ -60,7 +45,7 @@ This twelve-part composite pipeline can be simplified by combining functions tha
 
 Each of these may be considered a "chapter" in the story. Note that the number of verbs in each chapter title does not necessarily predict the length of its content. For example, the chapter on "model and interpret" covers a wide range of activities from a variety of perspectives, including classical statistics, machine learning, and computational simulation. It's a big and complicated chapter, but it is just one chapter among seven, even though many may consider it to be the most important chapter.
 
-### An Arc with Four Zones
+## An Arc with Four Zones
 
 ![The Standard Sequence as a Narrative Arc](images/image1.png){fig-align="center"}
 
@@ -86,7 +71,7 @@ We can take the conflict of interpretations over the status of technical knowled
 
 The topics associated with $II'$ are highly specific and change rapidly relative to other forms of knowledge, and so are often omitted from, or under-represented in, academic curricula, even though to many they are the *sine qua non* of data science. Abstract representation $III´$, on the other hand, involves expertise in areas ranging from how data are to be modeled for capture and analysis to how the results of analyses are to be presented to non-expert decision-makers. These areas of knowledge strive for formal generality over the long run; they are often expressed as grammars or design languages, frequently with visual modes (such as entity-relationship models and unified modeling language UML). They also include other forms of visualization, such as the plots developed for exploratory data analysis, such as box plots, and those used to represent statistical facts and analytical results in dashboards and infographics.
 
-### The Four Areas, Plus One
+## The Four Areas, Plus One
 
 We are now ready to define and name the areas of data science expertise that emerge from an analysis of the pipeline considered as an arc. In each case, we want to identify the common context shared by the paired activities in each zone as well as the tension that exists between them by virtue of their occupying opposite sides of the pipeline. In many cases, although we can identify a shared theme in each zone's work, the reality is that practitioners do not always interact or share disciplinary homes. One of the benefits of this model will be to identify these points of synergy and to identify new disciplinary boundaries.
 
@@ -112,7 +97,7 @@ The preceding four areas each represent areas of foundational knowledge, forms o
 
 ![The Integrative Role of Practice](images/image3.png){fig-align="center"}
 
-### Two Principal Components
+## Two Principal Components
 
 Is there a way to understand how the four primary areas are related to each other, beyond their being composed of functions from the same pipeline? Put another way, does the pipeline-as-arc model exhibit any structural features that will help us conceptualize the broader space of data science? Two such features stand out: (1) the opposition between concrete and abstract forms of representation, and (2) between human and machine processing.
 
@@ -122,9 +107,11 @@ Regarding the concrete and the abstract, it's clear that the arc model has a met
 
 The dimension of human and machine processing exhibits a similar duality, that between the conversion of information from humanly accessible forms, such as given by data acquired by instruments, into machine readable and processible forms, and the reverse. The process of moving from human to machine representations is a large part of what data capture, modeling, and wrangling is all about, while the process of converting the results of machine learning, broadly conceived, into humanly actionable form is what visualization and productization are all about. The reality of this dualism is captured by the concept of human-computer interaction (HCI), an established field that is applicable to both sides of the arc.
 
-How do the four fundamental areas map onto these two dimensions? We can define each area as a combination of one pole from each duality; the four areas result from all possible permutations of the two dimensions. This produces the following high level characterizations of each area: (1) Value is concerned with concrete humanity, (2) Design with abstract humanity, (3) Analytics with abstract machinery, and (4) Systems is concerned with concrete machinery. All of these make intuitive sense, with the exception of Design. This is consistent, however, with the fact that the area of Design emerges from this analysis as an undervalued and not well understood area of expertise, even though Yau emphasized it early on (Yau 2009b). Indeed, one of the consequences of this analysis is to train our attention on this area of knowledge and to develop it further.[^3]
+How do the four fundamental areas map onto these two dimensions? We can define each area as a combination of one pole from each duality; the four areas result from all possible permutations of the two dimensions. This produces the following high level characterizations of each area: (1) Value is concerned with concrete humanity, (2) Design with abstract humanity, (3) Analytics with abstract machinery, and (4) Systems is concerned with concrete machinery. All of these make intuitive sense, with the exception of Design. This is consistent, however, with the fact that the area of Design emerges from this analysis as an undervalued and not well understood area of expertise, even though Yau emphasized it early on (Yau 2009b). Indeed, one of the consequences of this analysis is to train our attention on this area of knowledge and to develop it further.
 
-[^3]: It is worth noting that the four areas of data science defined here are surprisingly analogous to the four approaches to artificial intelligence defined by Russel and Norvig, which are generated by combining the axes thinking/acting with human/rational (Russell and Norvig 1995: 5) [@russell1995: 5]:
+* * * 
+
+It is worth noting that the four areas of data science defined here are surprisingly analogous to the four approaches to artificial intelligence defined by Russel and Norvig, which are generated by combining the axes thinking/acting with human/rational (Russell and Norvig 1995: 5) [@russell1995: 5]:
 
 (1) thinking humanly\
 (2) thinking rationally\
@@ -145,6 +132,8 @@ $$
 
 In fact, it appears that the same space is shared by the 4+1 model of data science and Russell and Norvig's model of artificial intelligence. The difference that the former is focused on forms of labor carried out by the data scientist, whereas the latter concerns forms of intelligence built by AI specialists.
 
+* * * 
+
 One exciting interpretation of the two dimensions defined here is that they correspond to two principal components that undergird the general field of data science. As components, these axes define two orthogonal dimensions within which all the specific topics of data science may, in principle, be plotted. The reality behind these axes may be that they represent cognitive styles associated with the division of labor implied by the data science pipeline.
 
 **PC1: Human versus Machine**
@@ -162,18 +151,6 @@ The result of the preceding may be represented by the following graphic.
 ![The 4+1 Model of Data Science](images/image5.png){fig-align="center"}
 
 This visualization represents data science as composed of specific and complementary forms of knowledge. The vertical axis defines the dominant polarity between analysis --- the *how* of data science, often identified entirely with it, contrasted with the *why* of data science, from which data science derives its meaning and value as a profession. The horizontal access defines the polarity of methods that are often obscured in academic definitions of data science --- the supporting practices that make the Analytics component work in the first place.
-
-## Concluding Remarks
-
-The point of the 4 + 1 model, abstract as it is, is to provide a practical template for strategically planning the various elements of a school of data science. To serve as an effective template, a model must be general. But generality if often purchased at the cost of intuitive understanding. The following caveats may help make sense of the model when considering its usefulness when applied to various concrete activities.
-
-**The model describes areas of academic expertise, not objective reality**. It is a map of a division of labor writ large. Although each of the areas has clear connections to the others, the question to ask when deciding where an activity belongs is: *who would be an expert at doing it*? The realms help refine this question: the analytics area, for example, contains people who are good at working with abstract machinery. The four areas have the virtue of isolating intuitively correct communities of expertise. For example, people who are great at data product design may not know the esoteric depths of machine learning, and that adepts at machine learning are not usually experts in understanding human society and normative culture.
-
-**Each area in the model contains a collection of subfields that need to be teased out**. Some areas will have more subfields than others. Although some areas may be smaller than others in terms of number of experts (faculty) and courses, each area has a major impact on the overall practice of data science and the quality of an academic program's activities. In addition, these subfields are in an important sense "more real" than the categories. We can imagine them forming a dense network in which the areas define communities with centroids, and which are more interconnected than the clean-cut image of the model implies.
-
-**The principal components abstract/concrete and human/machine are meant to help imagine the kinds of activities that belong in each area**, through their connotations when combined to form the four bigrams --- concrete human, abstract human, concrete machine, and abstract machine. For example, the area of value as the realm of the "concrete human" (or perhaps "concrete humanity") is meant to connote what the Spanish philosopher Unamuno called the world of "flesh and bone" within which we live and die, that is, where things matter. On the other hand, analytics as the realm of the "abstract machine" is meant to connote the platonic world of mathematical reasoning which, since Euclid, has been characterized by rigorous, abstract, deductive reasoning that has literally been described as an abstract machine (see Alan Turing).
-
-**At the center of this model and each area is people**. Even in the area classified as "abstract machine," people and human thinking is at the center.
 
 ## References
 

@@ -5,16 +5,24 @@ project:
 book:
   title: "The 4 + 1 Model of Data Science"
   reader-mode: true
-  sharing: [twitter, facebook, linkedin]
+  author: "Rafael C. Alvarado"
+  date: "8 November 2022"
+  page-navigation: true
+  repo-url: https://github.com/ontoligent/four-plus-one-model
+
+  # downloads: [pdf]
   chapters:
     - index.qmd
     - the-four-plus-one-model.qmd
+    - concluding-remarks.qmd
   appendices:
     - appendix-sources.qmd
 
 format:
   html: 
     code-link: true
-    author-meta: "Rafael C. Alvarado"
-    author-affiliation: "School of Data Science, University of Virginia"
     callout-appearance: simple
+  # pdf:
+  #   documentclass: scrreport
+  # epub:
+  #   cover-image: cover.png    

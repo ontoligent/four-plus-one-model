@@ -1,12 +1,12 @@
 ---
-title: "The 4+1 Model of Data Science: Appendix"
+title: "Primary Sources"
 format: html
 editor: visual
 link-citations: true
 bibliography: HistoryDataScience.bib
 ---
 
-## About the sources
+## About the Sources
 
 The materials on which the conclusions of this essay are drawn come from a variety of sources, from technical journals to blogs to internal documents. They also come from a range of viewpoints, from data analysis and statistics to data mining and data science _per se_. For the purposes of the essay, we select a more or less representative subset across these axes of variation. 
 
@@ -552,7 +552,8 @@ file:///private/var/folders/14/rnyfspnx2q131jp_752t9fc80000gn/T/com.microsoft.Ou
   </tbody>
 </table>
 
-```{bibliography}
-```
+## References
 
+::: {#refs}
+:::
 

@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Rafael C. Alvarado">
 
-<title>The 4 + 1 Model of Data Science - 2&nbsp; The 4+1 Model of Data Science</title>
+<title>The 4 + 1 Model of Data Science - 2&nbsp; The Image of the Pipeline</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -50,7 +49,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./appendix-sources.html" rel="next">
+<link href="./concluding-remarks.html" rel="next">
 <link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -91,7 +90,7 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The 4+1 Model of Data Science</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Image of the Pipeline</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -106,27 +105,7 @@ div.csl-indent {
     <div class="sidebar-title mb-0 py-0">
       <a href="./">The 4 + 1 Model of Data Science</a> 
         <div class="sidebar-tools-main">
-    <a href="" title="Share" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></a>
-    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
-        <li>
-          <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
-            <i class="bi bi-bi-twitter pe-1"></i>
-          Twitter
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item sidebar-tools-main-item" href="https://www.facebook.com/sharer/sharer.php?u=|url|">
-            <i class="bi bi-bi-facebook pe-1"></i>
-          Facebook
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item sidebar-tools-main-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
-            <i class="bi bi-bi-linkedin pe-1"></i>
-          LinkedIn
-          </a>
-        </li>
-    </ul>
+    <a href="https://github.com/ontoligent/four-plus-one-model" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-reader-toggle sidebar-tool" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
@@ -149,7 +128,12 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./the-four-plus-one-model.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The 4+1 Model of Data Science</span></a>
+  <a href="./the-four-plus-one-model.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Image of the Pipeline</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./concluding-remarks.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Concluding Remarks</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -162,7 +146,7 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix-sources.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">The 4+1 Model of Data Science: Appendix</span></a>
+  <a href="./appendix-sources.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Primary Sources</span></a>
   </div>
 </li>
       </ul>
@@ -176,16 +160,12 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#a-common-theme-the-image-of-the-pipeline" id="toc-a-common-theme-the-image-of-the-pipeline" class="nav-link active" data-scroll-target="#a-common-theme-the-image-of-the-pipeline"><span class="toc-section-number">2.1</span>  A Common Theme: The Image of the Pipeline</a>
-  <ul class="collapse">
-  <li><a href="#a-common-sequence" id="toc-a-common-sequence" class="nav-link" data-scroll-target="#a-common-sequence"><span class="toc-section-number">2.1.1</span>  A Common Sequence</a></li>
-  <li><a href="#an-arc-with-four-zones" id="toc-an-arc-with-four-zones" class="nav-link" data-scroll-target="#an-arc-with-four-zones"><span class="toc-section-number">2.1.2</span>  An Arc with Four Zones</a></li>
-  <li><a href="#the-four-areas-plus-one" id="toc-the-four-areas-plus-one" class="nav-link" data-scroll-target="#the-four-areas-plus-one"><span class="toc-section-number">2.1.3</span>  The Four Areas, Plus One</a></li>
-  <li><a href="#two-principal-components" id="toc-two-principal-components" class="nav-link" data-scroll-target="#two-principal-components"><span class="toc-section-number">2.1.4</span>  Two Principal Components</a></li>
-  </ul></li>
-  <li><a href="#final-representation" id="toc-final-representation" class="nav-link" data-scroll-target="#final-representation"><span class="toc-section-number">2.2</span>  Final Representation</a></li>
-  <li><a href="#concluding-remarks" id="toc-concluding-remarks" class="nav-link" data-scroll-target="#concluding-remarks"><span class="toc-section-number">2.3</span>  Concluding Remarks</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="toc-section-number">2.4</span>  References</a></li>
+  <li><a href="#a-common-theme" id="toc-a-common-theme" class="nav-link active" data-scroll-target="#a-common-theme"><span class="toc-section-number">2.1</span>  A Common Theme</a></li>
+  <li><a href="#an-arc-with-four-zones" id="toc-an-arc-with-four-zones" class="nav-link" data-scroll-target="#an-arc-with-four-zones"><span class="toc-section-number">2.2</span>  An Arc with Four Zones</a></li>
+  <li><a href="#the-four-areas-plus-one" id="toc-the-four-areas-plus-one" class="nav-link" data-scroll-target="#the-four-areas-plus-one"><span class="toc-section-number">2.3</span>  The Four Areas, Plus One</a></li>
+  <li><a href="#two-principal-components" id="toc-two-principal-components" class="nav-link" data-scroll-target="#two-principal-components"><span class="toc-section-number">2.4</span>  Two Principal Components</a></li>
+  <li><a href="#final-representation" id="toc-final-representation" class="nav-link" data-scroll-target="#final-representation"><span class="toc-section-number">2.5</span>  Final Representation</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="toc-section-number">2.6</span>  References</a></li>
   </ul>
 </nav>
     </div>
@@ -194,19 +174,13 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The 4+1 Model of Data Science</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Image of the Pipeline</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Rafael C. Alvarado </p>
-          </div>
-  </div>
     
   
     
@@ -215,18 +189,9 @@ div.csl-indent {
 
 </header>
 
-<section id="a-common-theme-the-image-of-the-pipeline" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="a-common-theme-the-image-of-the-pipeline"><span class="header-section-number">2.1</span> A Common Theme: The Image of the Pipeline</h2>
-<p>A review of the literature of data science definitions, from sources attempting to define the field explicitly, as well as from self-definitions from adjacent fields such as data analysis and data mining, reveals that most definitions invoke the image of a data processing pipeline — a sequence of actions through which data flows as it moves from the consumption of so-called raw data to production of actionable results. Consumed data may come from a variety of sources — databases or intentional experiments or sensors. Results may be equally various, from the communication of analytical results to stake-holders to the development of a data product for use on the web. For a detailed review of these sources, see the <a href="./appendix-sources.html">Appendix</a>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<!--#
-Insert here the approach of looking the pipelines as a trope, a kind of narrative, and therefore subject to literary analysis. 
-
-Viewed in this way, these pipeline narratives have an obvious chiasmatic structure. 
-
-They also have a three-part structure that is common to most stories -- a beginning, middle, and end. This structure is more useful than it looks: 
--->
-<section id="a-common-sequence" class="level3" data-number="2.1.1">
-<h3 data-number="2.1.1" class="anchored" data-anchor-id="a-common-sequence"><span class="header-section-number">2.1.1</span> A Common Sequence</h3>
+<section id="a-common-theme" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="a-common-theme"><span class="header-section-number">2.1</span> A Common Theme</h2>
+<p>A review of the literature of data science definitions, from sources attempting to define the field explicitly, as well as from self-definitions from adjacent fields such as data analysis and data mining, reveals that most definitions invoke the image of a data processing pipeline — a sequence of actions through which data flows as it moves from the consumption of so-called raw data to production of actionable results. Consumed data may come from a variety of sources — databases or intentional experiments or sensors. Results may be equally various, from the communication of analytical results to stake-holders to the development of a data product for use on the web. For a detailed review of these sources, see the <a href="./appendix-sources.html">Appendix</a>.</p>
 <p>An analysis of a representative sample of essays that define a data processing pipeline shows that the various stories consist of elements drawn from a standard sequence of about twelve elements, give or take a few, depending on how one might expand or contract terms. These may signified by a core set of verbs or event types (which narratologists call functions), with the understanding that many synonyms are employed in the examples:</p>
 <ol type="1">
 <li>Understand</li>
@@ -256,8 +221,8 @@ They also have a three-part structure that is common to most stories -- a beginn
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="math inline">\(G\)</span> reflect</p>
 <p>Each of these may be considered a “chapter” in the story. Note that the number of verbs in each chapter title does not necessarily predict the length of its content. For example, the chapter on “model and interpret” covers a wide range of activities from a variety of perspectives, including classical statistics, machine learning, and computational simulation. It’s a big and complicated chapter, but it is just one chapter among seven, even though many may consider it to be the most important chapter.</p>
 </section>
-<section id="an-arc-with-four-zones" class="level3" data-number="2.1.2">
-<h3 data-number="2.1.2" class="anchored" data-anchor-id="an-arc-with-four-zones"><span class="header-section-number">2.1.2</span> An Arc with Four Zones</h3>
+<section id="an-arc-with-four-zones" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="an-arc-with-four-zones"><span class="header-section-number">2.2</span> An Arc with Four Zones</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/image1.png" class="img-fluid figure-img"></p>
@@ -281,8 +246,8 @@ They also have a three-part structure that is common to most stories -- a beginn
 <p>We can take the conflict of interpretations over the status of technical knowledge in data science as a clue and use it to identify two broad dimensions that cross-cut the functions in zones <span class="math inline">\(II\)</span> and <span class="math inline">\(III\)</span>: technical know-how and abstract representation. Technical know-how <span class="math inline">\(II´\)</span> involves expertise in developing and deploying software and hardware designed to handle data at scale, including high-performance computing, big data architectures (such as Hadoop and its descendants), and data-oriented programming languages and libraries.</p>
 <p>The topics associated with <span class="math inline">\(II'\)</span> are highly specific and change rapidly relative to other forms of knowledge, and so are often omitted from, or under-represented in, academic curricula, even though to many they are the <em>sine qua non</em> of data science. Abstract representation <span class="math inline">\(III´\)</span>, on the other hand, involves expertise in areas ranging from how data are to be modeled for capture and analysis to how the results of analyses are to be presented to non-expert decision-makers. These areas of knowledge strive for formal generality over the long run; they are often expressed as grammars or design languages, frequently with visual modes (such as entity-relationship models and unified modeling language UML). They also include other forms of visualization, such as the plots developed for exploratory data analysis, such as box plots, and those used to represent statistical facts and analytical results in dashboards and infographics.</p>
 </section>
-<section id="the-four-areas-plus-one" class="level3" data-number="2.1.3">
-<h3 data-number="2.1.3" class="anchored" data-anchor-id="the-four-areas-plus-one"><span class="header-section-number">2.1.3</span> The Four Areas, Plus One</h3>
+<section id="the-four-areas-plus-one" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="the-four-areas-plus-one"><span class="header-section-number">2.3</span> The Four Areas, Plus One</h2>
 <p>We are now ready to define and name the areas of data science expertise that emerge from an analysis of the pipeline considered as an arc. In each case, we want to identify the common context shared by the paired activities in each zone as well as the tension that exists between them by virtue of their occupying opposite sides of the pipeline. In many cases, although we can identify a shared theme in each zone’s work, the reality is that practitioners do not always interact or share disciplinary homes. One of the benefits of this model will be to identify these points of synergy and to identify new disciplinary boundaries.</p>
 <p><strong>Area I: Value</strong></p>
 <p>The area of value is defined by the relationship of data science to the world from which it draws data and into which it inserts data products. More broadly, it concerns the primary motivations of data science — why do we practice data science in the first place? It combines the traditional discipline of ethics with the professional activities of business planning, policy making, developing motivations for scientific research, and other activities that have a direct impact on people and the planet. This is the area where we determine what we do versus what we do not do, in order to maximize societal and environmental benefit and minimize harm. It is also the area that looks inward to the other data science areas and provides guidance on such issues as algorithmic bias or open science. Common activities include the forming of value propositions that initiate data science projects, research into how data is created and used “in the wild,” understanding the ethics of data acquisition, manipulation, communication, and sharing, and the application of data products in the world.</p>
@@ -301,8 +266,8 @@ They also have a three-part structure that is common to most stories -- a beginn
 </figure>
 </div>
 </section>
-<section id="two-principal-components" class="level3" data-number="2.1.4">
-<h3 data-number="2.1.4" class="anchored" data-anchor-id="two-principal-components"><span class="header-section-number">2.1.4</span> Two Principal Components</h3>
+<section id="two-principal-components" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="two-principal-components"><span class="header-section-number">2.4</span> Two Principal Components</h2>
 <p>Is there a way to understand how the four primary areas are related to each other, beyond their being composed of functions from the same pipeline? Put another way, does the pipeline-as-arc model exhibit any structural features that will help us conceptualize the broader space of data science? Two such features stand out: (1) the opposition between concrete and abstract forms of representation, and (2) between human and machine processing.</p>
 <p>Regarding the concrete and the abstract, it’s clear that the arc model has a metric quality to it: as one moves toward the pivot point of analysis, one moves away from the concrete messiness of reality as experienced to the “tidy” and abstract world of mathematics; similarly, as one moves from the pivot back to the world, there is a requirement to convert esoteric results into more humanly intelligible forms, often through a process of concretization; visualizations succeed by employing concrete metaphors that flesh out mathematical ideas that are notoriously detached from the imagination — no one can imagine, for example, n-dimensional spaces beyond a handful of dimensions. The arc describes a dialectic of abstraction and concretization that defines the ebb and flow and data science work.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -312,7 +277,9 @@ They also have a three-part structure that is common to most stories -- a beginn
 </figure>
 </div>
 <p>The dimension of human and machine processing exhibits a similar duality, that between the conversion of information from humanly accessible forms, such as given by data acquired by instruments, into machine readable and processible forms, and the reverse. The process of moving from human to machine representations is a large part of what data capture, modeling, and wrangling is all about, while the process of converting the results of machine learning, broadly conceived, into humanly actionable form is what visualization and productization are all about. The reality of this dualism is captured by the concept of human-computer interaction (HCI), an established field that is applicable to both sides of the arc.</p>
-<p>How do the four fundamental areas map onto these two dimensions? We can define each area as a combination of one pole from each duality; the four areas result from all possible permutations of the two dimensions. This produces the following high level characterizations of each area: (1) Value is concerned with concrete humanity, (2) Design with abstract humanity, (3) Analytics with abstract machinery, and (4) Systems is concerned with concrete machinery. All of these make intuitive sense, with the exception of Design. This is consistent, however, with the fact that the area of Design emerges from this analysis as an undervalued and not well understood area of expertise, even though Yau emphasized it early on (Yau 2009b). Indeed, one of the consequences of this analysis is to train our attention on this area of knowledge and to develop it further.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>How do the four fundamental areas map onto these two dimensions? We can define each area as a combination of one pole from each duality; the four areas result from all possible permutations of the two dimensions. This produces the following high level characterizations of each area: (1) Value is concerned with concrete humanity, (2) Design with abstract humanity, (3) Analytics with abstract machinery, and (4) Systems is concerned with concrete machinery. All of these make intuitive sense, with the exception of Design. This is consistent, however, with the fact that the area of Design emerges from this analysis as an undervalued and not well understood area of expertise, even though Yau emphasized it early on (Yau 2009b). Indeed, one of the consequences of this analysis is to train our attention on this area of knowledge and to develop it further.</p>
+<hr>
+<p>It is worth noting that the four areas of data science defined here are surprisingly analogous to the four approaches to artificial intelligence defined by Russel and Norvig, which are generated by combining the axes thinking/acting with human/rational (Russell and Norvig 1995: 5) <span class="citation" data-cites="russell1995">(<a href="#ref-russell1995" role="doc-biblioref">Russell and Norvig 1995</a>: 5)</span>:</p>
 <ol type="1">
 <li>thinking humanly<br>
 </li>
@@ -331,15 +298,15 @@ abstract : concrete :: thinking : action
 human : rational :: human : machine
 \]</span></p>
 <p>In fact, it appears that the same space is shared by the 4+1 model of data science and Russell and Norvig’s model of artificial intelligence. The difference that the former is focused on forms of labor carried out by the data scientist, whereas the latter concerns forms of intelligence built by AI specialists.</p>
+<hr>
 <p>One exciting interpretation of the two dimensions defined here is that they correspond to two principal components that undergird the general field of data science. As components, these axes define two orthogonal dimensions within which all the specific topics of data science may, in principle, be plotted. The reality behind these axes may be that they represent cognitive styles associated with the division of labor implied by the data science pipeline.</p>
 <p><strong>PC1: Human versus Machine</strong></p>
 <p>The human-machine axis accounts for the most variance in the field. This seems evident from the fact that Conway’s Venn diagram model of data science represents only the machine side of our model, with practice replaced by “substantive expertise” <span class="citation" data-cites="conway2010">(<a href="#ref-conway2010" role="doc-biblioref">Conway 2010</a>)</span>. The human side — Value and Design — is left out, or short-changed by being lumped in with domain knowledge. The very fact that the human side has to be explained and added to the model suggests strongly that it defines a pole at some distance from the areas of knowledge described in Conway’s model. The human pole refers to humanity understood as situated in their historical, social, and cultural milieu. It is synonymous with <em>human experience</em>. The machine pole refers to the technoscientific apparatus of formal, quantitative reasoning that operates on representations of the human and the world. In the context of data science, it is more or less synonymous with <em>machine intelligence</em>, broadly conceived to include machine learning but also other modes of analysis on the spectrum of prediction and inference. Given these poles, the human-machine axis represents the opposition between humanistic disciplines that seek to understand human experience as such, and the formal sciences that employ machine intelligence, broadly conceived, to interpret that experience as represented and aggregated in the form of data.</p>
 <p><strong>PC2: Concrete versus Abstract</strong></p>
 <p>The abstract-concrete axis accounts for the difference between two forms of knowledge, roughly between direct experience and the indirect representation of that experience enabled through data. Both the realm of Value and Systems involve immersion in the messy details of lived experience — and direct acquaintance with the devils in those details. This is the messy world of hacks and ironies. The realms of Design and Analysis, on the other hand, are founded on abstract representations that strive for clear and distinct purity, and which allow for deductive reasoning to succeed at the cost of simplifying assumptions and reduced representations. This is the orderly world of models. The concrete pole refers to situated knowledge, knowledge as understood by hackers and makers, but also ethnographers who seek to maximize thick description in their work. It represents <em>concrete materiality</em>. The abstract pole refers to formal knowledge, knowledge in the form of mathematical symbolism, deductive proofs, and algorithmic patterns. It is <em>abstract form</em>. Given these poles, the concrete-abstract axis is roughly the opposition between applied and pure forms of knowledge, between those that embrace materiality and those that seek purity of form.</p>
 </section>
-</section>
-<section id="final-representation" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="final-representation"><span class="header-section-number">2.2</span> Final Representation</h2>
+<section id="final-representation" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="final-representation"><span class="header-section-number">2.5</span> Final Representation</h2>
 <p>The result of the preceding may be represented by the following graphic.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -349,23 +316,9 @@ human : rational :: human : machine
 </div>
 <p>This visualization represents data science as composed of specific and complementary forms of knowledge. The vertical axis defines the dominant polarity between analysis — the <em>how</em> of data science, often identified entirely with it, contrasted with the <em>why</em> of data science, from which data science derives its meaning and value as a profession. The horizontal access defines the polarity of methods that are often obscured in academic definitions of data science — the supporting practices that make the Analytics component work in the first place.</p>
 </section>
-<section id="concluding-remarks" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="concluding-remarks"><span class="header-section-number">2.3</span> Concluding Remarks</h2>
-<p>The point of the 4 + 1 model, abstract as it is, is to provide a practical template for strategically planning the various elements of a school of data science. To serve as an effective template, a model must be general. But generality if often purchased at the cost of intuitive understanding. The following caveats may help make sense of the model when considering its usefulness when applied to various concrete activities.</p>
-<p><strong>The model describes areas of academic expertise, not objective reality</strong>. It is a map of a division of labor writ large. Although each of the areas has clear connections to the others, the question to ask when deciding where an activity belongs is: <em>who would be an expert at doing it</em>? The realms help refine this question: the analytics area, for example, contains people who are good at working with abstract machinery. The four areas have the virtue of isolating intuitively correct communities of expertise. For example, people who are great at data product design may not know the esoteric depths of machine learning, and that adepts at machine learning are not usually experts in understanding human society and normative culture.</p>
-<p><strong>Each area in the model contains a collection of subfields that need to be teased out</strong>. Some areas will have more subfields than others. Although some areas may be smaller than others in terms of number of experts (faculty) and courses, each area has a major impact on the overall practice of data science and the quality of an academic program’s activities. In addition, these subfields are in an important sense “more real” than the categories. We can imagine them forming a dense network in which the areas define communities with centroids, and which are more interconnected than the clean-cut image of the model implies.</p>
-<p><strong>The principal components abstract/concrete and human/machine are meant to help imagine the kinds of activities that belong in each area</strong>, through their connotations when combined to form the four bigrams — concrete human, abstract human, concrete machine, and abstract machine. For example, the area of value as the realm of the “concrete human” (or perhaps “concrete humanity”) is meant to connote what the Spanish philosopher Unamuno called the world of “flesh and bone” within which we live and die, that is, where things matter. On the other hand, analytics as the realm of the “abstract machine” is meant to connote the platonic world of mathematical reasoning which, since Euclid, has been characterized by rigorous, abstract, deductive reasoning that has literally been described as an abstract machine (see Alan Turing).</p>
-<p><strong>At the center of this model and each area is people</strong>. Even in the area classified as “abstract machine,” people and human thinking is at the center.</p>
-</section>
-<section id="references" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="references"><span class="header-section-number">2.4</span> References</h2>
+<section id="references" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="references"><span class="header-section-number">2.6</span> References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-afcrl1963" class="csl-entry" role="doc-biblioentry">
-AFCRL. 1963. <span>“Report on Research at AFCRL: July 1962 - July 1963.”</span> Bedford, Mass.
-</div>
-<div id="ref-azevedo2008" class="csl-entry" role="doc-biblioentry">
-Azevedo, Ana Isabel Rojão Lourenço, and Manuel Filipe Santos. 2008. <span>“KDD, SEMMA and CRISP-DM: A Parallel Overview.”</span> <em>IADS-DM</em>.
-</div>
 <div id="ref-conway2010" class="csl-entry" role="doc-biblioentry">
 Conway, Drew. 2010. <span>“The Data Science Venn Diagram.”</span> <a href="http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram">http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram</a>.
 </div>
@@ -393,13 +346,6 @@ Zuboff, Shoshana. 1995. <em>In the Age of the Smart Machine: The Future of Work 
 </div>
 
 
-</section>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>The idea that this pipeline is fundamental to data science is not new — in the 1990s, data mining was conceptualized as a pipeline with the SEMMA and CRISP-DM models that are widely adopted by data scientists today in one form or another, such as Mason and Wiggins’ OSEMI model <span class="citation" data-cites="azevedo2008 mason2010">(<a href="#ref-azevedo2008" role="doc-biblioref">Azevedo and Santos 2008</a>; <a href="#ref-mason2010" role="doc-biblioref">Mason and Wiggins 2010</a>)</span>. In fact, the image goes back at least to the early 1960s, when the Data Sciences Laboratory of the U.S. Air Force was created to address the fact that “[m]odern data processing and computing machinery, together with improved communications, has made it possible to *ask for*, *collect, process and use* astronomical amounts of detailed data” <span class="citation" data-cites="afcrl1963">(<a href="#ref-afcrl1963" role="doc-biblioref">AFCRL 1963</a>: 187, emphasis added)</span>. More recently, Donoho’s “50 Years of Data Science” proposes a framework for the field based on a sequence of six divisions that follow the structure of a pipeline <span class="citation" data-cites="donoho2017">(<a href="#ref-donoho2017" role="doc-biblioref">Donoho 2017</a>)</span>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>It is worth noting that the four areas of data science defined here are surprisingly analogous to the four approaches to artificial intelligence defined by Russel and Norvig, which are generated by combining the axes thinking/acting with human/rational (Russell and Norvig 1995: 5) <span class="citation" data-cites="russell1995">(<a href="#ref-russell1995" role="doc-biblioref">Russell and Norvig 1995</a>: 5)</span>:<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
 </section>
 
 </main> <!-- /main -->
@@ -543,8 +489,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./appendix-sources.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">The 4+1 Model of Data Science: Appendix</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./concluding-remarks.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Concluding Remarks</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
