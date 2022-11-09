@@ -1,0 +1,13 @@
+<!--
+Long version (derived from from Brachman & Anand 1996)
+
+1.  **Understanding**: "Developing an understanding of the application domain and the relevant prior knowledge, and identifying the goal of the KDD process from the customer's viewpoint."
+2.  **Creating**: "Creating a target data set: selecting a data set, or focusing on a subset of variables or data samples, on which discovery is to be performed."
+3.  **Cleaning**: "Data cleaning and preprocessing: basic operations such as the removal of noise if appropriate, collecting the necessary information to model or account for noise, deciding on strategies for handling missing data fields, accounting for time sequence information and known changes."
+4.  **Reduction and projection**: "Data reduction and projection: finding usefull features to represent the data depending on the goal of the task. Using dimensionality reduction or transformation methods to reduce the effective number of variables under consideration or to find invariant representations for the data."
+5.  **Method selction**: "Matching the goals of the KDD process (step 1) to particular data mining *method*: e.g., summarization, classification, regression, clustering, etc."
+6.  **Model selection**: "Choosing the data mining algorithm(s): selecting method(s) to be used for searching for patterns the data. This includes deciding which models and parameters maybe appropriate (e.g. models for categorical data are different than models on vectors over the reals) and matching a particular data mining methodwith the overall criteria of the KDDprocess (e.g., the end-user maybe more interested in understanding the model than its predictive capabilities ...)."
+7.  **Data mining**: "Data mining: searching for patterns of interest in a particular representational form or a set of such representations: classification rules or trees, regression, clustering, and so forth."
+8.  **Interpreting**: "Interpreting mined patterns, possibly return to any of steps 1-7 for further iteration. This step can also involve visualization of the extracted patterns/models, or visualization of the data given the extracted models."
+9.  **Consolidating**: "Consolidating discovered knowledge: incorporating this knowledge into another system for further action, or simply documenting it and reporting it to interested parties. This also includes checking for and resolving potential conflicts with prreviously believed (or extracted) knowledge."
+-->

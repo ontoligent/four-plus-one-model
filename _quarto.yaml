@@ -3,7 +3,7 @@ project:
   output-dir: docs
   
 book:
-  title: "The 4 + 1 Model of Data Science"
+  title: "The 4+1 Model of Data Science"
   reader-mode: true
   author: "Rafael C. Alvarado"
   date: "8 November 2022"
@@ -17,6 +17,13 @@ book:
     - concluding-remarks.qmd
   appendices:
     - appendix-sources.qmd
+    - ds-and-ai.qmd
+
+  page-footer:
+    left: |
+      Written by Rafael C. Alvarado with input from many colleagues at UVA's [School of Data Science](http://datascience.virginia.edu).
+    right: |
+      This book was built with <a href="https://quarto.org/">Quarto</a>.
 
 format:
   html: 
@@ -24,6 +31,7 @@ format:
     callout-appearance: simple
     author-meta: "Rafael C. Alvarado"
     number-sections: false
+    fig-align: "center"
 
   # pdf:
   #   documentclass: scrreport

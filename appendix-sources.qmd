@@ -4,557 +4,552 @@ format: html
 editor: visual
 link-citations: true
 bibliography: HistoryDataScience.bib
+execute:
+  echo: false
 ---
 
 # About the Sources {.unnumbered}
 
+The primary sources on which the conclusions of this essay are based comprise a variety of documents, from technical journals to blog posts to internal reports. They also come from a range of viewpoints, from data analysis and statistics to data mining and data science *per se*. For the purposes of the essay, we select a more or less representative subset across these axes of variation. With respect to representativeness, in some cases a document was chosen for its influence, in others, such as the post by Dataman, because it is considered more or less typical of common genre. 
 
-The materials on which the conclusions of this essay are drawn come from a variety of sources, from technical journals to blogs to internal documents. They also come from a range of viewpoints, from data analysis and statistics to data mining and data science _per se_. For the purposes of the essay, we select a more or less representative subset across these axes of variation. 
+The twelve documents chosen are listed in chronological order, beginning with Tukey's seminal essay on data analysis and ending with contempory explainers. Included also are the definitions of the CRISP-DM and KDD processes which are the most developed pipeline models.
 
-For each source, we list the phases cited by the authors as fundamental to data processing, broadly conceived. These are aggregated in the table that follows, aligning the specific steps with the general categories used to produce a composite pipeline. Identifiers for each source are indicated by a short string in brackets that precedes the citation and is used in the first column of the table.
+Each source entry below contains short description and then list the phases cited by the authors as fundamental to data processing, broadly conceived. We then map these phases onto the standard sequence described in the main part of this essay and listed here for convenience. 
+
+1.  Understand
+2.  Plan
+3.  Collect
+4.  Store
+5.  Clean
+6.  Explore
+7.  Prepare
+8.  Model
+9.  Interpret
+10. Communicate
+11. Deploy
+12. Reflect
+
+These mappings are indicated by an arrow pointing to the subset of terms from the standard sequence, e.g. ... $\rightarrow [Explore]$ These mappings are also aggregated into a composite pipeline and displayed the table below;each model row is referenced by its key as defined in the entries. 
 
 It should be noted that in most cases these phases are explicitly described as a process and often as a pipeline. When they are not, the implication is strong. In some cases, the process is likened to a cycle, emphasizing the connection between the endpoints of the pipeline, which is also emphasized by the 4+1 model.
 
-The twelve documents listed below begin with Tukey's seminal essay on data analysis and end with examples of explainers of data science that have become quite frequent in recent years. Included also are the class definitions of the CRISP-DM and KDD processes which are the most developed pipeline models.
+```{python}
+phases = "Understand Plan Collect Store Clean Explore Prepare Model Interpret Communicate Deploy Reflect".split()
+sources = "Tukey KDD SEMMA Hayashi CRISPDM OSEMI Ojeda+ Caffo+ Donoho Géron Das Dataman Porter".split()
+pipes = {source:'' for source in sources}
+```
 
 ## Source List
 
 ### Tukey on Data Analysis
 
-Key: `Tukey` \
-Source: @tukeyFutureDataAnalysis1962 [URL](https://www.jstor.org/stable/2237638#metadata_info_tab_contents) \
-Field: Statistics, Data Analysis \
-Notes:
-* Distinguishes between mathematical statistics and data analysis. 
-* Defines data analysis as: "... procedures for **analyzing** data, techniques for **interpreting** the results of such procedures, ways of **planning** the **gathering** of data to make its analysis easier, more precise or more accurate, and all the machinery and results of (mathematical) statistics which apply to analyzing data." (p. 2)
-* "Data analysis is a larger and more varied field than inference, or incisive procedures, or allocation"
-* Defines data analysis as a science; contrasts with mathematics, which is not _per se_. "Data analysis, and the parts of statistics which adhere to it, must then take on the characteristics of a science rather than those of mathematics ..." (p. 6)
-* "Data analysis, as used here, includes planning for the acquisition of data as well as working with data already obtained." (p. 40)
-* Pipeline model implicit.
+Key: `Tukey`\
+Year: 1962 \
+Source: @tukeyFutureDataAnalysis1962 [URL](https://www.jstor.org/stable/2237638#metadata_info_tab_contents)\
+Field: Statistics, Data Analysis
 
-Model: 
+In this classic essay, Tukey introduces the concept of data analysis, which he distinguishes from mathematical statistics and likens to an empirical science. He defines data analysis as an empirical process with phases including "... procedures for **analyzing** data, techniques for **interpreting** the results of such procedures, ways of **planning** the **gathering** of data to make its analysis easier, more precise or more accurate, and all the machinery and results of (mathematical) statistics which apply to analyzing data" (p. 2). Unpacking this statement yields a four phase model.
 
-1. Planning: "ways of planning the gather of data to make its analysis easier".
-1. Gathering: the gathering of data.	 	 	
-1. Analyzing: the analysis of data with "all the machinery and results of (mathematical) statistics".
-1. Interpreting: "techniques for intepreting the results of" analysis.
+1.  **Planning**: This phase includes "ways of planning the the gather of data to make its analysis easier." $\rightarrow [Plan]$ 
+2.  **Gathering**: The gathering of data, either through creation or by acquisition of "data already obtained" (p. 40). Includes also the shaping of data "to make its analysis easier," which corresponds to our concept of Preparation.
+$\rightarrow [Collect]$ 
+3.  **Analyzing**: This is where data are analyzed with "all the machinery and results of (mathematical) statistics."
+$\rightarrow [Explore, Model]$ 
+4.  **Interpreting**: "techniques for interpreting the results of" analysis.
+$\rightarrow [Interpret]$ 
+
+Note that Tukey's model is unique in that his concept of exploration carries much more weight than how the term tends to be used to day. 
+
+```{python}
+pipes['Tukey'] = """
+Understand | 
+Plan | planning
+Collect | gathering
+Store | 
+Clean | 
+Explore | analyzing
+Prepare | gathering
+Model | analyzing
+Interpret | interpret
+Communicate | 
+Deploy | 
+Reflect | 
+"""
+```
 
 ### Fayyad on KDD
-Key: `KDD` \
-Source: @fayyadKnowledgeDiscoveryData1996 [URL&rarr;](https://www.aaai.org/Papers/KDD/1996/KDD96-014.pdf?utm_campaign=ml4devs-newsletter&utm_medium=email&utm_source=Revue%20newsletter) \
-Field: Data Mining \
-Notes: 
-* Summarization of prior article.
-* Described on p. 84.
-* Most thorough, but still not complete. 
-* "The KDD process can involve significant iteration and may contain loops between any two steps."
-* Exploration takes place in the data mining step. "Data Mining is a step in the KDD process consisting of applying data analysis and discovery algorithms that, under acceptable computational efficiency limitations, produce a particular enumeration of patterns over the data ...." (p. 83)
-* KDD is the process of using DM methods to extract what is deemed knowledge according to the specification of measures and thresholds, using a database along with any required preprocessing, sub sampling, and transformation of the database. 
 
-Steps: 
+Key: `KDD`\
+Year: 1996
+Source: @fayyadKnowledgeDiscoveryData1996 [URL→](https://www.aaai.org/Papers/KDD/1996/KDD96-014.pdf?utm_campaign=ml4devs-newsletter&utm_medium=email&utm_source=Revue%20newsletter)\
+Field: Data Mining\
 
-Short version
+KDD, or Knowledge Discovery in Databases, emerged in the late 1980s as both datasets and the computational resources to work with them became abundant. These resources included commercial databases and the PC. In many ways the most adjacent field to contemoporary data science, this approach is unabashedly dedicated to finding patterns in data prior to developing a probabilistic model to justify their use. Fayyad's essay identifies five steps [@fayyadKnowledgeDiscoveryData1996: 84]. He emphasizes the highly iterative and cyclical nature of the process, arguing that it "may contain loops between any two steps." Another significant aspect of this conception of the pipeline is the role of exploration in the analytical phase: "Data Mining is a step in the KDD process consisting of applying data analysis and discovery algorithms that, under acceptable computational efficiency limitations, produce a particular enumeration of patterns over the data ...." (p. 83)
 
- 1. Selection: Creating a target data set, or focusing on a subset of variables or data samples, on which discovery is to be performed.
- 2. Pre-processing: Cleaning and pre processing the data in order to obtain consistent data.
- 3. Transformation: Transformation of the data using dimensionality reduction and other methods.
- 4. Data Mining: Searching for patterns of interest in a particular representational form, depending on the DM objective (usually, prediction). 
- 5. Interpretation/Evaluation: Interpretation and evaluation of the mined patterns.
+1.  **Selection**: Creating a target data set, or focusing on a subset of variables or data samples, on which discovery is to be performed. 
+$\rightarrow [Collect]$
+2.  **Pre-processing**: Cleaning and pre processing the data in order to obtain consistent data.
+$\rightarrow [Clean]$
+3.  **Transformation**: Transformation of the data using dimensionality reduction and other methods.
+$\rightarrow [Prepare]$
+4.  **Data Mining**: Searching for patterns of interest in a particular representational form, depending on the DM objective (usually, prediction).
+$\rightarrow [Model]$
+5.  **Interpretation/Evaluation**: Interpretation and evaluation of the mined patterns.
+$\rightarrow [Interpretl]$
 
-Long version (derived from from Brachman & Anand 1996)
-
-1. **Understanding**: "Developing an understanding of the application domain and the relevant prior knowledge, and identifying the goal of the KDD process from the customer’s viewpoint."
-2. **Creating**: "Creating a target data set: selecting a data set, or focusing on a subset of variables or data samples, on which discovery is to be performed."
-3. **Cleaning**: "Data cleaning and preprocessing: basic operations such as the removal of noise if appropriate, collecting the necessary information to model or account for noise, deciding on strategies for handling missing data fields, accounting for time sequence information and known changes."
-4. **Reduction and projection**: "Data reduction and projection: finding usefull features to represent the data depending on the goal of the task. Using dimensionality reduction or transformation methods to reduce the effective number of variables under consideration or to find invariant representations for the data."
-5. **Method selction**: "Matching the goals of the KDD process (step 1) to particular data mining _method_: e.g., summarization, classification, regression, clustering, etc." 
-6. **Model selection**: "Choosing the data mining algorithm(s): selecting method(s) to be used for searching for patterns the data. This includes deciding which models and parameters maybe appropriate (e.g. models for categorical data are different than models on vectors over the reals) and matching a particular data mining methodwith the overall criteria of the KDDprocess (e.g., the end-user maybe more interested in understanding the model than its predictive capabilities ...)." 
-7. **Data mining**: "Data mining: searching for patterns of interest in a particular representational form or a set of such representations: classification rules or trees, regression, clustering, and so forth."
-8. **Interpreting**: "Interpreting mined patterns, possibly return to any of steps 1-7 for further iteration. This step can also involve visualization of the extracted patterns/models, or visualization of the data given the extracted models."
-9. **Consolidating**: "Consolidating discovered knowledge: incorporating this knowledge into another system for further action, or simply documenting it and reporting it to interested parties. This also includes checking for and resolving potential conflicts with prreviously believed (or extracted) knowledge."
-
-<!--
-NOT SURE where this came from ...
-1. Frame
-1. Collect	
-1. Explore	
-1. Process	 	 	
-1. Analyze	 	
-1. Communicate	 	 
--->
+```{python}
+pipes['KDD'] = """
+Understand | 
+Plan | 
+Collect | selection 
+Store | 
+Clean | pre-processing
+Explore | 
+Prepare | transformation
+Model | data mining
+Interpret | interpretation and evaluation
+Communicate | 
+Deploy | 
+Reflect | 
+"""
+```
 
 ### Azevedo on SEMMA
 
-Key: `SEMMA` \ 
-Source: @azevedoKDDSEMMACRISPDM2008 
+Key: `SEMMA`\
+Year: 1996
+Source: @azevedoKDDSEMMACRISPDM2008\
 Field: Statistics
 
-Notes:
-* Developed by SAS institute in 1996 (source?). 
-* Although developed for SAS Enterprise Miner, widely referenced as a model, especially in comparison to KDD and CRISP-DM. Bias towards statistis and to the SAS product is evident in the first step.
-* Descriptions are derived from Azevedo, et al. 2008.
+The SEMMA model was developed the by SAS institute in 1996 as part of the documentation for their product, SAS Enterprise Miner. Even so, the model is referenced outside of this context, often as a comparison to KDD and CRISP-DM. Its bias towards statististics is evident in the first step.
 
-Steps: 
-1. Sample: Sampling the data by extracting a portion of a large data set big enough to contain the significant information, yet small enough to manipulate quickly.
-2. Explore: Exploration of the data by searching for unanticipated trends and anomalies in order to gain understanding and ideas
-3. Modify: Modification of the data by creating, selecting, and transforming the variables to focus the model selection process
-4. Model: Modeling the data by allowing the software to search automatically for a combination of data that reliably predicts a desired outcome.
-5. Assess: Assessing the data by evaluating the usefulness and reliability of the findings from the DM process and estimate how well it performs. 
+1.  **Sample**: Sampling the data by extracting a portion of a large data set big enough to contain the significant information, yet small enough to manipulate quickly.
+$\rightarrow [Collect]$
+2.  **Explore**: Exploration of the data by searching for unanticipated trends and anomalies in order to gain understanding and ideas
+$\rightarrow [Explore]$
+3.  **Modify**: Modification of the data by creating, selecting, and transforming the variables to focus the model selection process
+$\rightarrow [Prepare]$
+4.  **Model**: Modeling the data by allowing the software to search automatically for a combination of data that reliably predicts a desired outcome.
+$\rightarrow [Model]$
+5.  **Assess**: Assessing the data by evaluating the usefulness and reliability of the findings from the DM process and estimate how well it performs.
+$\rightarrow [Interpret]$
+
+```{python}
+pipes['SEMMA'] = """
+Understand | 
+Plan | 
+Collect | sample 
+Store | 
+Clean | 
+Explore | explore
+Prepare | modify
+Model | model
+Interpret | assess
+Communicate | 
+Deploy | 
+Reflect | 
+"""
+```
 
 ### Hayashi on Data Science
 
-Key: `Hayashi` 
-Source: @hayashiDataScienceClassification1998 [URL&rarr;](https://link.springer.com/chapter/10.1007/978-4-431-65950-1_3) \
+Key: `Hayashi` \ 
+Year: 1998 \
+Source: @hayashiDataScienceClassification1998 [URL→](https://link.springer.com/chapter/10.1007/978-4-431-65950-1_3) \
 Field: Statistics
 
-Notes:
+The Japanese statistician Chikio Hayashi adopted the term "data science" in the early 1990s to define a field that did not succumb to what he saw to be the errors of both statistics and data analysis. He argued that mathematical statistics had become too attached to problems of inference and removed from reality, while data analysis had lost interest in understanding the meaning of the data it deals with. His definition of data science is decidely processual: "Data Science consists of three phases: design for data, collection of data and analysis on data. It is important that the three phases are treated with the concept of unification based on the fundamental philosophy of science .... In these phases the methods which are fitted for the object and are valid, must be studied with a good perspective." (p. 41) Similar to KDD and CRISM-PM, Hayashi envisioned this process as a spiral, oscillating between poles if what he called "diversification" and "simplification." Note also that each of these terms are broad; each, as described, comprises more than on of the standard sequence phases.
 
-* Hayashi adopted the term "data science" in the early 1990s to define a field that did not succumb to what he saw to be the errors of both statistics and data analysis. He felt that mathematical statistics had become too attached to problems of inference and removed from reality, while data analysis had lost interest in understanding the meaning of the data it deals with. 
-* "Data Science consists of three phases: design for data, collection of data and analysis on data. It is important that the three phases are treated with the concept of unification based on the fundamental philosophy of science .... In these phases the methods which are fitted for the object and are valid, must be studied with a good perspective." (p. 41)
-* Critical of both statistics and data analysis.
-* Viewed the pipeline as a spiral of diversification and simplification.
-* Hard and soft results.
+1.  **Design**: Surveys and experiments are developed to capture data from "multifarious phenomena."
+$\rightarrow [Understand, Plan]$
+2.  **Collection**: Phenomena are expressed as multidimensional or time-series data; properties of the data are made clear. At this stage, data are too complicated to draw clear conclusions. (Representation)
+$\rightarrow [Collect, Explore, Prepare]$
+3.  **Analysis**: By methods of classification, multidimensional data analysis, and statistics, data structure is revealed. Simplification and conceptualization. Also yields understanding of deviations of the model, which begins the cycle anew. (Revelation)
+$\rightarrow [Model, Interpet]$
 
-Steps:
-	
-1. Design: Surveys and experiments are developed to capture data from "multifarious phenomena".
-2. Collection: Phenomena are expressed as multidimensional or time-series data; properties of the data are made clear. At this stage, data are too complicated to draw clear conclusions. (Representation)
-3. Analysis: By methods of classification, multidimensional data analysis, and statistics, data structure is revealed. Simplification and conceptualization. Also yields understanding of deviations of the model, which begins the cycle anew. (Revelation)
+```{python}
+
+pipes['Hayashi'] = """
+Understand | design
+Plan | design
+Collect | collection
+Store | collection
+Clean | (collection)
+Explore | collection
+Prepare | collection
+Model | analysis
+Interpret | analysis 
+Communicate | 
+Deploy | 
+Reflect | 
+"""
+```
 
 ### Wirth and Hipp on CRISP-DM
 
-Key: `CRISPDM` 
-Source: @wirthCRISPDMStandardProcess1999 [URL&rarr;](http://www.cs.unibo.it/~danilo.montesi/CBD/Beatriz/10.1.1.198.5133.pdf) \
+Key: `CRISPDM` \
+Source: @wirthCRISPDMStandardProcess1999 [URL→](http://www.cs.unibo.it/~danilo.montesi/CBD/Beatriz/10.1.1.198.5133.pdf) \
 Field: Data Mining
 
 Notes:
 
-* "At the top level, the data mining process is organized into a small number of phases. Each phase consists of several second-level generic tasks."
-* The process is cyclic and recursive.
+-   "At the top level, the data mining process is organized into a small number of phases. Each phase consists of several second-level generic tasks."
+-   The process is cyclic and recursive.
 
 Steps:
 
-1. Business Understanding: Understanding project objectives and requirements from a business perspective. Development of a plan.
-2. Data Understanding: Initial data collection and activities to get familiar with the data, e.g. to identify data quality problems, to discover first insights into the data, or to detect interesting subsets to form hypotheses for hidden information. This is really two phases, which are combined because of their close relationship: _Collection_ and _Exploration_.
-3. Data Preparation: Construction of the final dataset. Tasks include table, record, an attribute selection, data cleaning, construction of new attributes, and transformation of data for modeling tools.
-4. Modeling: Modeling techniques selected and applied, parameters calibrated. 
-5. Evaluation At this stage in the project you have built one or more models that appear to have high quality, from a data analysis perspective. Before proceeding to final deployment of the model, it is important to more thoroughly evaluate the model, and review the steps executed to construct the model, to be certain it properly achieves the business objectives. A key objective is to determine if there is some important business issue that has not been sufficiently considered. At the end of this phase, a decision on the use of the data mining results should be reached.
-6. Deployment: Creation of the model is generally not the end of the project. Usually, the knowledge gained will need to be organized and presented in a way that the customer can use it. Depending on the requirements, the deployment phase can be as simple as generating a report or as complex as implementing a repeatable data mining process. In many cases it will be the user, not the data analyst, who will carry out the deployment steps. In any case, it is important to understand up front what actions will need to be carried out in order to actually make use of the created models.
+1.  Business Understanding: Understanding project objectives and requirements from a business perspective. Development of a plan.
+2.  Data Understanding: Initial data collection and activities to get familiar with the data, e.g. to identify data quality problems, to discover first insights into the data, or to detect interesting subsets to form hypotheses for hidden information. This is really two phases, which are combined because of their close relationship: *Collection* and *Exploration*.
+3.  Data Preparation: Construction of the final dataset. Tasks include table, record, an attribute selection, data cleaning, construction of new attributes, and transformation of data for modeling tools.
+4.  Modeling: Modeling techniques selected and applied, parameters calibrated.
+5.  Evaluation At this stage in the project you have built one or more models that appear to have high quality, from a data analysis perspective. Before proceeding to final deployment of the model, it is important to more thoroughly evaluate the model, and review the steps executed to construct the model, to be certain it properly achieves the business objectives. A key objective is to determine if there is some important business issue that has not been sufficiently considered. At the end of this phase, a decision on the use of the data mining results should be reached.
+6.  Deployment: Creation of the model is generally not the end of the project. Usually, the knowledge gained will need to be organized and presented in a way that the customer can use it. Depending on the requirements, the deployment phase can be as simple as generating a report or as complex as implementing a repeatable data mining process. In many cases it will be the user, not the data analyst, who will carry out the deployment steps. In any case, it is important to understand up front what actions will need to be carried out in order to actually make use of the created models.
+
+```{python}
+
+pipes['CRISPDM'] = """
+Understand | 
+Plan | 
+Collect | 
+Store | 
+Clean | 
+Explore | 
+Prepare | 
+Model | 
+Interpret | 
+Communicate | 
+Deploy | 
+Reflect | 
+"""
+```
 
 ### Mason and Wiggins on OSEMI
 
-Key: `OSEMI` 
-Source: @masonTaxonomyDataScience2010 [URL&rarr;](https://sites.google.com/a/isim.net.in/datascience_isim/taxonomy) \
+Key: `OSEMI` Source: @masonTaxonomyDataScience2010 [URL→](https://sites.google.com/a/isim.net.in/datascience_isim/taxonomy)\
 Field: Data Science
 
-Notes:
-* Assumes context of web, available data.
-* Borrowed language from [5 Steps of a Data Science Project Lifecycle](https://towardsdatascience.com/5-steps-of-a-data-science-project-lifecycle-26c50372b492).
+Notes: \* Assumes context of web, available data. \* Borrowed language from [5 Steps of a Data Science Project Lifecycle](https://towardsdatascience.com/5-steps-of-a-data-science-project-lifecycle-26c50372b492).
 
 Steps:
 
-1. Obtain: Gather data from relevant sources through APIs, web scraping, etc.
-2. Scrub: Clean data and convert to machine readable formats. Clearning includes handling missing data, inconsistent labels, or awkward formatting; stripping extraneous characters; normalizing values, etc.
-3. Explore: Find significan patterns and trends using statistical and data analytic methods, These include visualizing, clustering, performing dimensionality reduction.
-4. Model: Construct methods to predict and forecast.
-5. Interpret: Put the results to good use.
+1.  Obtain: Gather data from relevant sources through APIs, web scraping, etc.
+2.  Scrub: Clean data and convert to machine readable formats. Clearning includes handling missing data, inconsistent labels, or awkward formatting; stripping extraneous characters; normalizing values, etc.
+3.  Explore: Find significan patterns and trends using statistical and data analytic methods, These include visualizing, clustering, performing dimensionality reduction.
+4.  Model: Construct methods to predict and forecast.
+5.  Interpret: Put the results to good use.
+
+```{python}
+
+pipes['OSEMI'] = """
+Understand | 
+Plan | 
+Collect | 
+Store | 
+Clean | 
+Explore | 
+Prepare | 
+Model | 
+Interpret | 
+Communicate | 
+Deploy | 
+Reflect | 
+"""
+```
+
 
 ### Ojeda, et al. on Data Science
 
-Key: `Ojeda+` 
-Source: @ojedaPracticalDataScience2014 [URL&rarr;](https://www.packtpub.com/product/practical-data-science-cookbook-second-edition/9781787129627) \
+Key: `Ojeda+` Source: @ojedaPracticalDataScience2014 [URL→](https://www.packtpub.com/product/practical-data-science-cookbook-second-edition/9781787129627)\
 Field: Data Science
 
-<!--
-![](images/image_01_001.png)
--->
+1.  Acquisition: The first step in the pipeline is to acquire the data from a variety of sources, including relational databases, NoSQL and document stores, web scraping, and distributed databases such as HDFS on a Hadoop platform, RESTful APIs, flat files, and hopefully this is not the case, PDFs.
+2.  Exploration and understanding: The second step is to come to an understanding of the data that you will use and how it was collected; this often requires significant exploration.
+3.  Munging, wrangling, and manipulation: This step is often the single most time-consuming and important step in the pipeline. Data is almost never in the needed form for the desired analysis.
+4.  Analysis and modeling: This is the fun part where the data scientist gets to explore the statistical relationships between the variables in the data and pulls out his or her bag of machine learning tricks to cluster, categorize, or classify the data and create predictive models to see into the future.
+5.  Communicating and operationalizing: At the end of the pipeline, we need to give the data back in a compelling form and structure, sometimes to ourselves to inform the next iteration, and sometimes to a completely different audience. The data products produced can be a simple one-off report or a scalable web product that will be used interactively by millions.
 
-1. Acquisition: The first step in the pipeline is to acquire the data from a variety of sources, including relational databases, NoSQL and document stores, web scraping, and distributed databases such as HDFS on a Hadoop platform, RESTful APIs, flat files, and hopefully this is not the case, PDFs.
-2. Exploration and understanding: The second step is to come to an understanding of the data that you will use and how it was collected; this often requires significant exploration.
-3. Munging, wrangling, and manipulation: This step is often the single most time-consuming and important step in the pipeline. Data is almost never in the needed form for the desired analysis.
-4. Analysis and modeling: This is the fun part where the data scientist gets to explore the statistical relationships between the variables in the data and pulls out his or her bag of machine learning tricks to cluster, categorize, or classify the data and create predictive models to see into the future.
-5. Communicating and operationalizing: At the end of the pipeline, we need to give the data back in a compelling form and structure, sometimes to ourselves to inform the next iteration, and sometimes to a completely different audience. The data products produced can be a simple one-off report or a scalable web product that will be used interactively by millions.
+```{python}
 
-<!--
-1. Acquire	 	
-2. Explore	
-3. Wrangle	 	
-4. Analyze
-5. Communicate	
-6. Operationalize
--->
+pipes['Ojeda+'] = """
+Understand | 
+Plan | 
+Collect | 
+Store | 
+Clean | 
+Explore | 
+Prepare | 
+Model | 
+Interpret | 
+Communicate | 
+Deploy | 
+Reflect | 
+"""
+```
 
 ### Caffo, et al. on Data Science
 
-Key: `Caffo+` 
-Source: @caffoExecutiveDataScience2015 [URL&rarr;](https://leanpub.com/eds) \
+Key: `Caffo+` Source: @caffoExecutiveDataScience2015 [URL→](https://leanpub.com/eds)\
 Field: Data Science
 
-1. Question	 	
-1. Get	 	 	
-1. Explore	 	
-1. Model	
-1. Interpret	
-1. Communicate	 	 
+1.  Question\
+2.  Get\
+3.  Explore\
+4.  Model\
+5.  Interpret\
+6.  Communicate
+
+```{python}
+pipes['Caffo+'] = """
+Understand | 
+Plan | 
+Collect | 
+Store | 
+Clean | 
+Explore | 
+Prepare | 
+Model | 
+Interpret | 
+Communicate | 
+Deploy | 
+Reflect | 
+"""
+```
+
 
 ### Donaho on Data Science
 
-Key: `Donoho` 
-Source: @donoho50YearsData2017 [URL&rarr;](https://doi.org/10.1080/10618600.2017.1384734) 
+Key: `Donoho` Source: @donoho50YearsData2017 [URL→](https://doi.org/10.1080/10618600.2017.1384734)
 
 Field: Statistics
 
-1. Gather
-1. Prepare
-1. Explore
-1. Represent and transform 
-1. Compute	
-1. Model	 	
-1. Present	 	
-1. Meta
+1.  Gather
+2.  Prepare
+3.  Explore
+4.  Represent and transform
+5.  Compute
+6.  Model
+7.  Present
+8.  Meta
+
+```{python}
+
+pipes['Donoho'] = """
+Understand | 
+Plan | 
+Collect | 
+Store | 
+Clean | 
+Explore | 
+Prepare | 
+Model | 
+Interpret | 
+Communicate | 
+Deploy | 
+Reflect | 
+"""
+```
+
 
 ### Géron on Machine Learning
 
-Key: `Géron` 
-Source: @geronHandsOnMachineLearning2017 [URL&rarr;](https://www.investincotedor.fr/sites/default/files/webform/pdf-hands-on-machine-learning-with-scikit-learn-and-tensorflow-conce-aurlien-gron-pdf-download-free-book-21c7262.pdf) \
+Key: `Géron` Source: @geronHandsOnMachineLearning2017 [URL→](https://www.investincotedor.fr/sites/default/files/webform/pdf-hands-on-machine-learning-with-scikit-learn-and-tensorflow-conce-aurlien-gron-pdf-download-free-book-21c7262.pdf)\
 Field: Data Science
 
-1. Big picture	 	
-1. Get	 	
-1. Clean	
-1. Discover	
-1. Prepare	Model
-1. Fine tune	 	 	
-1. Launch	
+1.  Big picture\
+2.  Get\
+3.  Clean\
+4.  Discover
+5.  Prepare Model
+6.  Fine tune\
+7.  Launch
+
+```{python}
+
+pipes['Géron'] = """
+Understand | 
+Plan | 
+Collect | 
+Store | 
+Clean | 
+Explore | 
+Prepare | 
+Model | 
+Interpret | 
+Communicate | 
+Deploy | 
+Reflect | 
+"""
+```
+
 
 ### Das on Data Science
 
-Key: `Das`
-Source: @dasDataScienceLife2019 [URL&rarr;](https://towardsdatascience.com/data-science-life-cycle-101-for-dummies-like-me-e66b47ad8d8f) \
+Key: `Das` Source: @dasDataScienceLife2019 [URL→](https://towardsdatascience.com/data-science-life-cycle-101-for-dummies-like-me-e66b47ad8d8f)\
 Field: Data Science
 
-1. Understand
-1. Mine
-1. Clean
-1. Explore
-1. Features
-1. Model
-1. Visualize	 	 
+1.  Understand
+2.  Mine
+3.  Clean
+4.  Explore
+5.  Features
+6.  Model
+7.  Visualize
+
+```{python}
+
+pipes['Das'] = """
+Understand | 
+Plan | 
+Collect | 
+Store | 
+Clean | 
+Explore | 
+Prepare | 
+Model | 
+Interpret | 
+Communicate | 
+Deploy | 
+Reflect | 
+"""
+```
 
 ### Dataman on Data Science
 
-Key: `Dataman` 
-Source: @datamanDataScienceModeling2020 [URL&rarr;](https://towardsdatascience.com/data-science-modeling-process-fa6e8e45bf02) \
+Key: `Dataman` Source: @datamanDataScienceModeling2020 [URL→](https://towardsdatascience.com/data-science-modeling-process-fa6e8e45bf02)\
 Field: Data Science
 
-1. Business
-1. Data requirements	
-1. Collection
-1. EDA
-1. Modeling
-1. Evaluation
-1. Deployment
-1. Monitoring	 	 
+1.  Business
+2.  Data requirements\
+3.  Collection
+4.  EDA
+5.  Modeling
+6.  Evaluation
+7.  Deployment
+8.  Monitoring
+
+```{python}
+
+pipes['Dataman'] = """
+Understand | 
+Plan | 
+Collect | 
+Store | 
+Clean | 
+Explore | 
+Prepare | 
+Model | 
+Interpret | 
+Communicate | 
+Deploy | 
+Reflect | 
+"""
+```
+
 
 ### Porter on Data Science
 
-Key: `Porter` 
-Source: @porterFrameworkDataScience2020
-Field: Statistics
-<!--
+Key: `Porter` Source: @porterFrameworkDataScience2020 Field: Statistics <!--
 file:///private/var/folders/14/rnyfspnx2q131jp_752t9fc80000gn/T/com.microsoft.Outlook/Outlook%20Temp/data-science%5B44%5D.html#categories_of_data_science
 -->
 
-1. Collect	
-1. Store and represent	
-1. Manipulation	 	
-1. Computing	
-1. Analytics	 	
-1. Communicate	
-1. Practice	
-1. Disciplinary
+1.  Collect\
+2.  Store and represent\
+3.  Manipulation\
+4.  Computing\
+5.  Analytics\
+6.  Communicate\
+7.  Practice
+8.  Disciplinary
+
+```{python}
+
+pipes['Porter'] = """
+Understand | 
+Plan | 
+Collect | 
+Store | 
+Clean | 
+Explore | 
+Prepare | 
+Model | 
+Interpret | 
+Communicate | 
+Deploy | 
+Reflect | 
+"""
+```
+
 
 ## Summary Table
 
-<table border="1" class="dataframe" id="pipelines">
-  <thead>
-    <tr>
-      <th>&nbsp;</th>
-      <th>Understand</th>
-      <th>Plan</th>
-      <th>Collect</th>
-      <th>Store</th>
-      <th>Clean</th>
-      <th>Explore</th>
-      <th>Prepare</th>
-      <th>Model</th>
-      <th>Interpret</th>
-      <th>Communicate</th>
-      <th>Deploy</th>
-      <th>Reflect</th>
-    </tr>
-  </thead>
-  <tbody>
+```{python}
+ 
+import pandas as pd
+import re
+```
 
-  <!-- Tukey -->
-  <tr>
-    <th>Tukey</th>
-    <td>&nbsp;</td>
-    <td>Plan</td>
-    <td>Gather</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>Analyze</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>Interpret</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
+```{python}
 
-<!-- KDD -->
-<!--
-<tr>
-    <th>KDD</th>
-    <td>Understanding</td>
-    <td>&nbsp;</td>
-    <td>Creating</td>
-    <td>&nbsp;</td>
-    <td>Cleaning</td>
-    <td>&nbsp;</td>
-    <td>Reduction and projection</td>
-    <td>Method and model selction; data mining</td>
-    <td>Interpreting</td>
-    <td>Consolidating</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
--->
-<tr>
-    <th>KDD</th>
-    <td></td>
-    <td></td>
-    <td>Selection</td>
-    <td>&nbsp;</td>
-    <td>Preprocessing</td>
-    <td>&nbsp;</td>
-    <td>Transformation</td>
-    <td>Data mining</td>
-    <td>Interpreting</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
+data = []
+cols = ['Source', 'Std Phase', 'Src Phase']
+for source in pipes:
+    for row in pipes[source].split("\n")[1:-1]:
+        data.append([source] + re.split('\s*\|\s*', row))
 
-  <!-- KDD2 -->
-  <!--
-  <tr>
-    <th>KDD2</th>
-    <td>Frame</td>
-    <td>&nbsp;</td>
-    <td>Collect</td>
-    <td>Explore</td>
-    <td>Process</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>Analyze</td>
-    <td>&nbsp;</td>
-    <td>Communicate</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  -->
-  <!-- SEMMA -->
-  <tr>
-    <th>SEMMA</th>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>Sample</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>Explore</td>
-    <td>Modify</td>
-    <td>Model</td>
-    <td>Assess</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <!-- Hayashi -->
-  <tr>
-    <th>Hayashi</th>
-    <td>Design</td>
-    <td>&nbsp;</td>
-    <td>Collect</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>Analyze</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
+# Convert CSV to wide table
+df = pd.DataFrame(data, columns=cols).reset_index(drop=True).set_index(cols[:2]).unstack() 
+df.columns = df.columns.droplevel(0)
+df.columns = phases # Preserve sorting
+df.index = sources # Preserve sorting
+df.columns.name = ''
+```
 
-  <!-- CRISPDM -->
-  <tr>
-    <th>CRISPDM</th>
-    <td>Business</td>
-    <td>&nbsp;</td>
-    <td>Collect</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>Explore</td>
-    <td>Preparation</td>
-    <td>Modeling</td>
-    <td>Evaluation</td>
-    <td>&nbsp;</td>
-    <td>Deployment</td>
-    <td>&nbsp;</td>
-  </tr>
+```{python}
+#| output: true 
+df
+```
 
-  <!-- OSEMI -->
-  <tr>
-    <th>OSEMI</th>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>Obtain</td>
-    <td>&nbsp;</td>
-    <td>Scrub</td>
-    <td>Explore</td>
-    <td>&nbsp;</td>
-    <td>Model</td>
-    <td>Interpret</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
 
-  <!-- Ojeda+ -->
-  <tr>
-    <th>Ojeda+</th>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>Acquire</td>
-    <td>&nbsp;</td>
-    <td></td>
-    <td>Explore and understand</td>
-    <td>Wrangle</td>
-    <td>Analyze and model</td>
-    <td>&nbsp;</td>
-    <td>Communicate</td>
-    <td>Operationalize</td>
-    <td>&nbsp;</td>
-  </tr>
+## Extra
 
-  <!-- Caffo+ -->
-  <tr>
-    <th>Caffo+</th>
-    <td>Question</td>
-    <td>&nbsp;</td>
-    <td>Get</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>Explore</td>
-    <td>&nbsp;</td>
-    <td>Model</td>
-    <td>Interpret</td>
-    <td>Communicate</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
+```{python}
 
-  <!-- Donaho -->
-  <tr>
-    <th>Donaho</th>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>Gather</td>
-    <td>&nbsp;</td>
-    <td>Prepare</td>
-    <td>Explore</td>
-    <td>Represent and transform; Compute</td>
-    <td>Model</td>
-    <td>&nbsp;</td>
-    <td>Present</td>
-    <td>&nbsp;</td>
-    <td>Meta</td>
-  </tr>
+my_table = """
+|         | Understand  | Plan              | Collect    | Store               | Clean         | Explore                | Prepare                          | Model             | Interpret    | Communicate | Deploy                 | Reflect      |
+|---------|-------------|-------------------|------------|---------------------|---------------|------------------------|----------------------------------|-------------------|--------------|-------------|------------------------|--------------|
+| Tukey   |             | Plan              | Gather     |                     |               | Analyze                |                                  |                   | Interpret    |             |                        |              |
+| KDD     |             |                   | Selection  |                     | Preprocessing |                        | Transformation                   | Data mining       | Interpreting |             |                        |              |
+| SEMMA   |             |                   | Sample     |                     |               | Explore                | Modify                           | Model             | Assess       |             |                        |              |
+| Hayashi | Design      |                   | Collect    |                     |               |                        |                                  | Analyze           |              |             |                        |              |
+| CRISPDM | Business    |                   | Collect    |                     |               | Explore                | Preparation                      | Modeling          | Evaluation   |             | Deployment             |              |
+| OSEMI   |             |                   | Obtain     |                     | Scrub         | Explore                |                                  | Model             | Interpret    |             |                        |              |
+| Ojeda+  |             |                   | Acquire    |                     |               | Explore and understand | Wrangle                          | Analyze and model |              | Communicate | Operationalize         |              |
+| Caffo+  | Question    |                   | Get        |                     |               | Explore                |                                  | Model             | Interpret    | Communicate |                        |              |
+| Donaho  |             |                   | Gather     |                     | Prepare       | Explore                | Represent and transform; Compute | Model             |              | Present     |                        | Meta         |
+| Géron   | Big picture |                   | Get        |                     | Clean         | Discover               | Prepare                          | Model; Fine tune  |              |             | Launch                 |              |
+| Das     | Understand  |                   | Mine       |                     | Clean         | Explore                | Features                         | Model             |              | Visualize   |                        |              |
+| Dataman | Business    | Data requirements | Collection |                     |               | EDA                    |                                  | Modeling          | Evaluation   |             | Deployment; Monitoring |              |
+| Porter  |             |                   | Collect    | Store and represent | Manipulation  |                        | Computing                        | Analytics         |              | Communicate | Practice               | Disciplinary |
+"""
+```
 
-  <!-- Géron -->
-  <tr>
-    <th>Géron</th>
-    <td>Big picture</td>
-    <td>&nbsp;</td>
-    <td>Get</td>
-    <td>&nbsp;</td>
-    <td>Clean</td>
-    <td>Discover</td>
-    <td>Prepare</td>
-    <td>Model; Fine tune</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>Launch</td>
-    <td>&nbsp;</td>
-  </tr>
+```{python}
 
-  <!-- Das -->
-  <tr>
-    <th>Das</th>
-    <td>Understand</td>
-    <td>&nbsp;</td>
-    <td>Mine</td>
-    <td>&nbsp;</td>
-    <td>Clean</td>
-    <td>Explore</td>
-    <td>Features</td>
-    <td>Model</td>
-    <td>&nbsp;</td>
-    <td>Visualize</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <!-- Dataman -->
-  <tr>
-    <th>Dataman</th>
-    <td>Business</td>
-    <td>Data requirements</td>
-    <td>Collection</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>EDA</td>
-    <td>&nbsp;</td>
-    <td>Modeling</td>
-    <td>Evaluation</td>
-    <td>&nbsp;</td>
-    <td>Deployment; Monitoring</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <!-- Porter -->
-  <tr>
-    <th>Porter</th>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>Collect</td>
-    <td>Store and represent</td>
-    <td>Manipulation</td>
-    <td>&nbsp;</td>
-    <td>Computing</td>
-    <td>Analytics</td>
-    <td>&nbsp;</td>
-    <td>Communicate</td>
-    <td>Practice</td>
-    <td>Disciplinary</td>
-  </tr>
-  </tbody>
-</table>
+# for i, row in enumerate(my_table.split("\n")[1:-1]):
+#     clean_row = [item.strip() for item in row.split("|")[1:-1]]
+#     print('\n'.join(clean_row))
+#     print('-' * 40)
+```
 
 ## References
 
 ::: {#refs}
 :::
 
+## Test HTML
+
+```{python}
+#| output: true 
+#| fig-cap: "Composite Timeline"
+# print(df.to_html())
+```
