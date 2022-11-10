@@ -99,7 +99,7 @@ $\rightarrow [Prepare]$
 4.  **Data Mining**: Searching for patterns of interest in a particular representational form, depending on the DM objective (usually, prediction).
 $\rightarrow [Model]$
 5.  **Interpretation/Evaluation**: Interpretation and evaluation of the mined patterns.
-$\rightarrow [Interpretl]$
+$\rightarrow [Interpret]$
 
 ```{python}
 pipes['KDD'] = """
@@ -196,7 +196,7 @@ Year: 1999 \
 Source: @wirthCRISPDMStandardProcess1999 [URL→](http://www.cs.unibo.it/~danilo.montesi/CBD/Beatriz/10.1.1.198.5133.pdf) \
 Field: Data Mining
 
-By the late 1990s, the practice of data mining had become widespread in industry and globally. In 1999 the Cross Industry Standard Process for Data Mining (CRISP-DM) was developed as a comprehensive and general model to support the use of data mining in a broad range of sectors in a principled manner. Designed to work within a project management framework, this model is by far the most developed, and it continues to influence the field of data science to this day. Like KDD before it, the model emphasizes the cyclic and recursive nature of the process, and this perspective is reflected in the circular diagram that often accompanies its presentation. The steps below are based on the summary presented in Wirth and Hipp's essay.
+By the late 1990s, the practice of data mining had become widespread in industry and globally. In 1999 the Cross Industry Standard Process for Data Mining (CRISP-DM) was developed in Europe as a comprehensive and general model to support the use of data mining in a broad range of sectors in a principled manner. Designed to work within a project management framework, this model is by far the most developed, and it continues to influence the field of data science to this day. Like KDD before it, the model emphasizes the cyclic and recursive nature of the process, and this perspective is reflected in the circular diagram that often accompanies its presentation. The steps below are based on the summary presented in Wirth and Hipp's essay.
 
 ![Process diagram showing the relationship between the different phases of CRISP-DM (Wikipedia)](images/1024px-CRISP-DM_Process_Diagram.png)
 
@@ -259,7 +259,7 @@ Collect | Obtain
 Store | 
 Clean | Scrub
 Explore | Explore
-Prepare | Scrub*
+Prepare | Scrub
 Model | Model
 Interpret | Interpret
 Communicate | 
@@ -292,12 +292,12 @@ $\rightarrow [Communicate, Deploy]$
 ```{python}
 
 pipes['Ojeda+'] = """
-Understand | 
+Understand | Exploration and understanding*
 Plan | 
 Collect | Acquisition
 Store | Acquisition
 Clean | Munging, wrangling, and manipulation
-Explore | Exploration and understanding
+Explore | 
 Prepare | Munging, wrangling, and manipulatiom
 Model | Analysis and modeling
 Interpret | 
