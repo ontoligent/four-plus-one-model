@@ -171,7 +171,7 @@ div.csl-indent {
   <ul>
   <li><a href="#about-the-sources" id="toc-about-the-sources" class="nav-link active" data-scroll-target="#about-the-sources">About the Sources</a>
   <ul class="collapse">
-  <li><a href="#source-list" id="toc-source-list" class="nav-link" data-scroll-target="#source-list">Source List</a>
+  <li><a href="#list-of-sources" id="toc-list-of-sources" class="nav-link" data-scroll-target="#list-of-sources">List of Sources</a>
   <ul class="collapse">
   <li><a href="#tukey-on-data-analysis" id="toc-tukey-on-data-analysis" class="nav-link" data-scroll-target="#tukey-on-data-analysis">Tukey on Data Analysis</a></li>
   <li><a href="#fayyad-on-kdd" id="toc-fayyad-on-kdd" class="nav-link" data-scroll-target="#fayyad-on-kdd">Fayyad on KDD</a></li>
@@ -187,6 +187,7 @@ div.csl-indent {
   <li><a href="#dataman-on-data-science" id="toc-dataman-on-data-science" class="nav-link" data-scroll-target="#dataman-on-data-science">Dataman on Data Science</a></li>
   <li><a href="#porter-on-data-science" id="toc-porter-on-data-science" class="nav-link" data-scroll-target="#porter-on-data-science">Porter on Data Science</a></li>
   </ul></li>
+  <li><a href="#comments" id="toc-comments" class="nav-link" data-scroll-target="#comments">Comments</a></li>
   <li><a href="#summary-table" id="toc-summary-table" class="nav-link" data-scroll-target="#summary-table">Summary Table</a></li>
   <li><a href="#extra" id="toc-extra" class="nav-link" data-scroll-target="#extra">Extra</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
@@ -221,23 +222,23 @@ div.csl-indent {
 <p>The twelve documents chosen are listed in chronological order, beginning with Tukey’s seminal essay on data analysis and ending with contempory explainers. Included also are the definitions of the CRISP-DM and KDD processes which are the most developed pipeline models.</p>
 <p>Each source entry below contains short description and then list the phases cited by the authors as fundamental to data processing, broadly conceived. We then map these phases onto the standard sequence described in the main part of this essay and listed here for convenience.</p>
 <ol type="1">
-<li>Understand</li>
-<li>Plan</li>
-<li>Collect</li>
-<li>Store</li>
-<li>Clean</li>
-<li>Explore</li>
-<li>Prepare</li>
-<li>Model</li>
-<li>Interpret</li>
-<li>Communicate</li>
-<li>Deploy</li>
-<li>Reflect</li>
+<li><p>Understand</p></li>
+<li><p>Plan</p></li>
+<li><p>Collect</p></li>
+<li><p>Store</p></li>
+<li><p>Clean</p></li>
+<li><p>Explore</p></li>
+<li><p>Prepare</p></li>
+<li><p>Model</p></li>
+<li><p>Interpret</p></li>
+<li><p>Communicate</p></li>
+<li><p>Deploy</p></li>
+<li><p>Reflect</p></li>
 </ol>
 <p>These mappings are indicated by an arrow pointing to the subset of terms from the standard sequence, e.g.&nbsp;… <span class="math inline">\(\rightarrow [Explore]\)</span> These mappings are also aggregated into a composite pipeline and displayed the table below;each model row is referenced by its key as defined in the entries.</p>
 <p>It should be noted that in most cases these phases are explicitly described as a process and often as a pipeline. When they are not, the implication is strong. In some cases, the process is likened to a cycle, emphasizing the connection between the endpoints of the pipeline, which is also emphasized by the 4+1 model.</p>
-<section id="source-list" class="level2">
-<h2 class="anchored" data-anchor-id="source-list">Source List</h2>
+<section id="list-of-sources" class="level2">
+<h2 class="anchored" data-anchor-id="list-of-sources">List of Sources</h2>
 <section id="tukey-on-data-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="tukey-on-data-analysis">Tukey on Data Analysis</h3>
 <p>Key: <code>Tukey</code><br>
@@ -259,7 +260,7 @@ Field: Statistics, Data Analysis</p>
 Year: 1996 Source: <span class="citation" data-cites="fayyadKnowledgeDiscoveryData1996">Fayyad et al. (<a href="#ref-fayyadKnowledgeDiscoveryData1996" role="doc-biblioref">1996</a>)</span> <a href="https://www.aaai.org/Papers/KDD/1996/KDD96-014.pdf?utm_campaign=ml4devs-newsletter&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">URL→</a><br>
 Field: Data Mining<br>
 </p>
-<p>KDD, or Knowledge Discovery in Databases, emerged in the late 1980s as both datasets and the computational resources to work with them became abundant. These resources included commercial databases and the PC. In many ways the most adjacent field to contemoporary data science, this approach is unabashedly dedicated to finding patterns in data prior to developing a probabilistic model to justify their use. Fayyad’s essay identifies five steps <span class="citation" data-cites="fayyadKnowledgeDiscoveryData1996">(<a href="#ref-fayyadKnowledgeDiscoveryData1996" role="doc-biblioref">Fayyad et al. 1996</a>: 84)</span>. He emphasizes the highly iterative and cyclical nature of the process, arguing that it “may contain loops between any two steps.” Another significant aspect of this conception of the pipeline is the role of exploration in the analytical phase: “Data Mining is a step in the KDD process consisting of applying data analysis and discovery algorithms that, under acceptable computational efficiency limitations, produce a particular enumeration of patterns over the data ….” (p.&nbsp;83)</p>
+<p>KDD, or Knowledge Discovery in Databases, emerged in the late 1980s as both datasets and the computational resources to work with them became abundant. These resources included commercial databases and personal computers. In many ways the most adjacent field to contemoporary data science, this approach is unabashedly dedicated to finding patterns in data prior to developing a probabilistic model to justify their use. Fayyad’s essay identifies five steps <span class="citation" data-cites="fayyadKnowledgeDiscoveryData1996">(<a href="#ref-fayyadKnowledgeDiscoveryData1996" role="doc-biblioref">Fayyad et al. 1996</a>: 84)</span>. He emphasizes the highly iterative and cyclical nature of the process, arguing that it “may contain loops between any two steps.” Another significant aspect of this conception of the pipeline is the role of exploration in the analytical phase: “Data Mining is a step in the KDD process consisting of applying data analysis and discovery algorithms that, under acceptable computational efficiency limitations, produce a particular enumeration of patterns over the data ….” (p.&nbsp;83)</p>
 <ol type="1">
 <li><strong>Selection</strong>: Creating a target data set, or focusing on a subset of variables or data samples, on which discovery is to be performed. <span class="math inline">\(\rightarrow [Collect]\)</span></li>
 <li><strong>Pre-processing</strong>: Cleaning and pre processing the data in order to obtain consistent data. <span class="math inline">\(\rightarrow [Clean]\)</span></li>
@@ -284,10 +285,11 @@ Field: Statistics</p>
 </section>
 <section id="hayashi-on-data-science" class="level3">
 <h3 class="anchored" data-anchor-id="hayashi-on-data-science">Hayashi on Data Science</h3>
-<p>Key: <code>Hayashi</code> &nbsp; Year: 1998<br>
+<p>Key: <code>Hayashi</code><br>
+Year: 1998<br>
 Source: <span class="citation" data-cites="hayashiDataScienceClassification1998">Hayashi et al. (<a href="#ref-hayashiDataScienceClassification1998" role="doc-biblioref">1998</a>)</span> <a href="https://link.springer.com/chapter/10.1007/978-4-431-65950-1_3">URL→</a><br>
 Field: Statistics</p>
-<p>The Japanese statistician Chikio Hayashi adopted the term “data science” in the early 1990s to define a field that did not succumb to what he saw to be the errors of both statistics and data analysis. He argued that mathematical statistics had become too attached to problems of inference and removed from reality, while data analysis had lost interest in understanding the meaning of the data it deals with. His definition of data science is decidely processual: “Data Science consists of three phases: design for data, collection of data and analysis on data. It is important that the three phases are treated with the concept of unification based on the fundamental philosophy of science …. In these phases the methods which are fitted for the object and are valid, must be studied with a good perspective.” (p.&nbsp;41) Similar to KDD and CRISM-PM, Hayashi envisioned this process as a spiral, oscillating between poles if what he called “diversification” and “simplification.” Note also that each of these terms are broad; each, as described, comprises more than on of the standard sequence phases.</p>
+<p>The Japanese statistician Chikio Hayashi adopted the term “data science” in the early 1990s to define a field that did not succumb to what he saw to be the errors of both statistics and data analysis. He argued that mathematical statistics had become too attached to problems of inference and removed from reality, while data analysis had lost interest in understanding the meaning of the data it deals with. His definition of data science is decidely processual: “Data Science consists of three phases: design for data, collection of data and analysis on data. It is important that the three phases are treated with the concept of unification based on the fundamental philosophy of science …. In these phases the methods which are fitted for the object and are valid, must be studied with a good perspective.” (p.&nbsp;41) Similar to KDD and CRISM-PM, Hayashi envisioned this process as a spiral, oscillating between poles if what he called “diversification” and “simplification.” Note also that each of these terms, as described, comprises more than on of the standard sequence phases.</p>
 <ol type="1">
 <li><strong>Design</strong>: Surveys and experiments are developed to capture data from “multifarious phenomena.” <span class="math inline">\(\rightarrow [Understand, Plan]\)</span></li>
 <li><strong>Collection</strong>: Phenomena are expressed as multidimensional or time-series data; properties of the data are made clear. At this stage, data are too complicated to draw clear conclusions. (Representation) <span class="math inline">\(\rightarrow [Collect, Explore, Prepare]\)</span></li>
@@ -297,47 +299,53 @@ Field: Statistics</p>
 <section id="wirth-and-hipp-on-crisp-dm" class="level3">
 <h3 class="anchored" data-anchor-id="wirth-and-hipp-on-crisp-dm">Wirth and Hipp on CRISP-DM</h3>
 <p>Key: <code>CRISPDM</code><br>
+Year: 1999<br>
 Source: <span class="citation" data-cites="wirthCRISPDMStandardProcess1999">Wirth and Hipp (<a href="#ref-wirthCRISPDMStandardProcess1999" role="doc-biblioref">1999</a>)</span> <a href="http://www.cs.unibo.it/~danilo.montesi/CBD/Beatriz/10.1.1.198.5133.pdf">URL→</a><br>
 Field: Data Mining</p>
-<p>Notes:</p>
-<ul>
-<li>“At the top level, the data mining process is organized into a small number of phases. Each phase consists of several second-level generic tasks.”</li>
-<li>The process is cyclic and recursive.</li>
-</ul>
-<p>Steps:</p>
+<p>By the late 1990s, the practice of data mining had become widespread in industry and globally. In 1999 the Cross Industry Standard Process for Data Mining (CRISP-DM) was developed as a comprehensive and general model to support the use of data mining in a broad range of sectors in a principled manner. Designed to work within a project management framework, this model is by far the most developed, and it continues to influence the field of data science to this day. Like KDD before it, the model emphasizes the cyclic and recursive nature of the process, and this perspective is reflected in the circular diagram that often accompanies its presentation. The steps below are based on the summary presented in Wirth and Hipp’s essay.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/1024px-CRISP-DM_Process_Diagram.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Process diagram showing the relationship between the different phases of CRISP-DM (Wikipedia)</figcaption><p></p>
+</figure>
+</div>
 <ol type="1">
-<li>Business Understanding: Understanding project objectives and requirements from a business perspective. Development of a plan.</li>
-<li>Data Understanding: Initial data collection and activities to get familiar with the data, e.g.&nbsp;to identify data quality problems, to discover first insights into the data, or to detect interesting subsets to form hypotheses for hidden information. This is really two phases, which are combined because of their close relationship: <em>Collection</em> and <em>Exploration</em>.</li>
-<li>Data Preparation: Construction of the final dataset. Tasks include table, record, an attribute selection, data cleaning, construction of new attributes, and transformation of data for modeling tools.</li>
-<li>Modeling: Modeling techniques selected and applied, parameters calibrated.</li>
-<li>Evaluation At this stage in the project you have built one or more models that appear to have high quality, from a data analysis perspective. Before proceeding to final deployment of the model, it is important to more thoroughly evaluate the model, and review the steps executed to construct the model, to be certain it properly achieves the business objectives. A key objective is to determine if there is some important business issue that has not been sufficiently considered. At the end of this phase, a decision on the use of the data mining results should be reached.</li>
-<li>Deployment: Creation of the model is generally not the end of the project. Usually, the knowledge gained will need to be organized and presented in a way that the customer can use it. Depending on the requirements, the deployment phase can be as simple as generating a report or as complex as implementing a repeatable data mining process. In many cases it will be the user, not the data analyst, who will carry out the deployment steps. In any case, it is important to understand up front what actions will need to be carried out in order to actually make use of the created models.</li>
+<li><strong>Business Understanding</strong>: Understanding project objectives and requirements from a business perspective. Includes the development of a plan. <span class="math inline">\(\rightarrow [Understand, Plan]\)</span></li>
+<li><strong>Data Understanding</strong>: The initial data collection and activities to get familiar with the data, e.g.&nbsp;to identify data quality problems, to discover first insights into the data, or to detect interesting subsets to form hypotheses for hidden information. This is really two phases — <strong>Collection</strong> and <strong>Exploration</strong> — which are combined because of their close, iterative relationship. <span class="math inline">\(\rightarrow [Collect, Explore]\)</span></li>
+<li><strong>Data Preparation</strong>: Construction of the final dataset for analytical use. Tasks include table, record, an attribute selection, data cleaning, construction of new attributes, and transformation of data for modeling tools. <span class="math inline">\(\rightarrow [Clean, Prepare]\)</span></li>
+<li><strong>Modeling</strong>: Modeling techniques are selected and applied, parameters calibrated. Modeling techniques include a broad range of unsupervised and supervised methods. As with KDD, there is an emphasis on pattern discovery, which has the effect of promoted methods that other models place squarely in the Explore phase of the standard sequence. <span class="math inline">\(\rightarrow [Model]\)</span></li>
+<li><strong>Evaluation</strong>: Evaluation of model performance by both intrinsic and extrinsic measures. Regarding the latter, a key objective is to determine if an important business issue has not been sufficiently considered. <span class="math inline">\(\rightarrow [Interpret]\)</span></li>
+<li><strong>Deployment</strong>: The knowledge gained by the model is presented in a way that the customer can use it. This may be something as simple as a report or as complex as a repeatable data mining process. In many cases the user, not the data analyst, will carry out the deployment. <span class="math inline">\(\rightarrow [Deploy]\)</span></li>
 </ol>
 </section>
 <section id="mason-and-wiggins-on-osemi" class="level3">
 <h3 class="anchored" data-anchor-id="mason-and-wiggins-on-osemi">Mason and Wiggins on OSEMI</h3>
-<p>Key: <code>OSEMI</code> Source: <span class="citation" data-cites="masonTaxonomyDataScience2010">Mason and Wiggins (<a href="#ref-masonTaxonomyDataScience2010" role="doc-biblioref">2010</a>)</span> <a href="https://sites.google.com/a/isim.net.in/datascience_isim/taxonomy">URL→</a><br>
+<p>Key: <code>OSEMI</code><br>
+Year: 2010<br>
+Source: <span class="citation" data-cites="masonTaxonomyDataScience2010">Mason and Wiggins (<a href="#ref-masonTaxonomyDataScience2010" role="doc-biblioref">2010</a>)</span> <a href="https://sites.google.com/a/isim.net.in/datascience_isim/taxonomy">URL→</a><br>
 Field: Data Science</p>
-<p>Notes: * Assumes context of web, available data. * Borrowed language from <a href="https://towardsdatascience.com/5-steps-of-a-data-science-project-lifecycle-26c50372b492">5 Steps of a Data Science Project Lifecycle</a>.</p>
-<p>Steps:</p>
+<p>After the phrase “data science” went viral (circa 2009), there were many efforts to make sense of the idea. It is around this time (2010) that Conway posted his Venn diagram of data science <span class="citation" data-cites="conwayDataScienceVenn2010">(<a href="#ref-conwayDataScienceVenn2010" role="doc-biblioref">Conway 2010</a>)</span>. Another influence model, based explicitly on the pipeline, came from Mason and Wiggins in a blog post hosted at O’Reilly’s Tech Radar site. In contrast to previous models rooted in statistics, this model assumes that data are abundant and available, such as data scrapable from the Web.</p>
 <ol type="1">
-<li>Obtain: Gather data from relevant sources through APIs, web scraping, etc.</li>
-<li>Scrub: Clean data and convert to machine readable formats. Clearning includes handling missing data, inconsistent labels, or awkward formatting; stripping extraneous characters; normalizing values, etc.</li>
-<li>Explore: Find significan patterns and trends using statistical and data analytic methods, These include visualizing, clustering, performing dimensionality reduction.</li>
-<li>Model: Construct methods to predict and forecast.</li>
-<li>Interpret: Put the results to good use.</li>
+<li><strong>Obtain</strong>: Gather data from relevant sources through APIs, web scraping, etc. <span class="math inline">\(\rightarrow [Collect]\)</span></li>
+<li><strong>Scrub</strong>: Clean data and convert data to machine readable formats. Clearning includes handling missing data, inconsistent labels, or awkward formatting; stripping extraneous characters; normalizing values, etc. <span class="math inline">\(\rightarrow [Clean, Prepare]\)</span></li>
+<li><strong>Explore</strong>: Find significant patterns and trends using statistical and data analytic methods, such as visualizing, clustering. Also includes transformations of the for more effective analysis, such as dimensionality reduction. <span class="math inline">\(\rightarrow [Explore]\)</span></li>
+<li><strong>Model</strong>: Construct methods to predict and forecast. These methods include those of inferential statistics and predictive machine learning. <span class="math inline">\(\rightarrow [Model]\)</span></li>
+<li><strong>Interpret</strong>: Making sense of the results as well as evaluating the performance of models. May involve domain experts. Also includes methods such as regularization that make models interpretable to those who use them, e.g.&nbsp;scientists or business people. <span class="math inline">\(\rightarrow [Interpret]\)</span></li>
 </ol>
 </section>
 <section id="ojeda-et-al.-on-data-science" class="level3">
 <h3 class="anchored" data-anchor-id="ojeda-et-al.-on-data-science">Ojeda, et al.&nbsp;on Data Science</h3>
-<p>Key: <code>Ojeda+</code> Source: <span class="citation" data-cites="ojedaPracticalDataScience2014">Ojeda et al. (<a href="#ref-ojedaPracticalDataScience2014" role="doc-biblioref">2014</a>)</span> <a href="https://www.packtpub.com/product/practical-data-science-cookbook-second-edition/9781787129627">URL→</a><br>
+<p>Key: <code>Ojeda+</code><br>
+Year: 2014<br>
+Source: <span class="citation" data-cites="ojedaPracticalDataScience2014">Ojeda et al. (<a href="#ref-ojedaPracticalDataScience2014" role="doc-biblioref">2014</a>)</span> <a href="https://www.packtpub.com/product/practical-data-science-cookbook-second-edition/9781787129627">URL→</a><br>
 Field: Data Science</p>
+<p>By 2014, data science had become a widespread practice in industry and the academic, and explanations of its nature became the subject of many books. This text is one of a genre that presents the field as a process, perhaps due to the influence of the CRISP-DM and OSEMI models, and uses the expression pipeline throughout. Note that the model defined in this book is not presented here as canonical. It suffers from various inconsistences, such as the labeling of steps in the text representation of the pipeline versus those on diagrams. It is included to demonstrate the pervasiveness of the model.</p>
 <ol type="1">
-<li>Acquisition: The first step in the pipeline is to acquire the data from a variety of sources, including relational databases, NoSQL and document stores, web scraping, and distributed databases such as HDFS on a Hadoop platform, RESTful APIs, flat files, and hopefully this is not the case, PDFs.</li>
-<li>Exploration and understanding: The second step is to come to an understanding of the data that you will use and how it was collected; this often requires significant exploration.</li>
-<li>Munging, wrangling, and manipulation: This step is often the single most time-consuming and important step in the pipeline. Data is almost never in the needed form for the desired analysis.</li>
-<li>Analysis and modeling: This is the fun part where the data scientist gets to explore the statistical relationships between the variables in the data and pulls out his or her bag of machine learning tricks to cluster, categorize, or classify the data and create predictive models to see into the future.</li>
-<li>Communicating and operationalizing: At the end of the pipeline, we need to give the data back in a compelling form and structure, sometimes to ourselves to inform the next iteration, and sometimes to a completely different audience. The data products produced can be a simple one-off report or a scalable web product that will be used interactively by millions.</li>
+<li><strong>Acquisition</strong>: Acquire the data from relational databases, NoSQL and document stores, web scraping, distributed databases (e.g.&nbsp;HDFS on a Hadoop platform), RESTful APIs, flat files, etc. Consistent with the other data mining models, the emphasis here is on working with available data, not generating it. <span class="math inline">\(\rightarrow [Collect]\)</span></li>
+<li><strong>Exploration and understanding</strong>: Understand the data and how it was collected or produced; this often requires significant exploration. Note that this step does <em>not</em> correspond to exploration in the sense of exploratory data analysis (EDA). Rather, it reflects the position of the data scientist as the receiver of someone else’s data and the need to infer what would normally belong to the first step of the standard squence <span class="math inline">\(Understand\)</span>. <span class="math inline">\(\rightarrow [Understand]\)</span></li>
+<li><strong>Munging, wrangling, and manipulation</strong>: Convert the data into the form required for analysis. This includes a wide range of activities, such as those mentioned in previous models. However, it also conflates the standard phases <span class="math inline">\(Clean\)</span> and <span class="math inline">\(Prepare\)</span>. <span class="math inline">\(\rightarrow [Clean, Prepare]\)</span></li>
+<li><strong>Analysis and modeling</strong>: Apply statistical and machine learning methods, including clustering, categorization, and classification. One presumes that the standard step of <span class="math inline">\(Explore\)</span> is included here. <span class="math inline">\(\rightarrow [Explore, Model]\)</span></li>
+<li><strong>Communicating and operationalizing</strong>: At the end of the pipeline, we need to give the data back in a compelling form and structure, sometimes to ourselves to inform the next iteration, and sometimes to a completely different audience. The data products produced can be a simple one-off report or a scalable web product that will be used interactively by millions. <span class="math inline">\(\rightarrow [Communicate, Deploy]\)</span></li>
 </ol>
 </section>
 <section id="caffo-et-al.-on-data-science" class="level3">
@@ -444,230 +452,255 @@ file:///private/var/folders/14/rnyfspnx2q131jp_752t9fc80000gn/T/com.microsoft.Ou
 </ol>
 </section>
 </section>
+<section id="comments" class="level2">
+<h2 class="anchored" data-anchor-id="comments">Comments</h2>
+<ul>
+<li>Place of clustering</li>
+<li>Place of explorations</li>
+<li>Cycles and pipes</li>
+<li>Missing steps, implicit steps</li>
+<li>Differences in order mostly confined to groups</li>
+<li>Right even when wrong – the end points <span class="math inline">\(I\)</span> and <span class="math inline">\(V\)</span>, and the middle <span class="math inline">\(III\)</span>, remain constant; the arms, as it were, are where it gets messy.</li>
+</ul>
+</section>
 <section id="summary-table" class="level2">
 <h2 class="anchored" data-anchor-id="summary-table">Summary Table</h2>
 <div class="cell" data-execution_count="17">
 <div class="cell-output cell-output-display" data-execution_count="17">
 
-<div>
-
-<table class="dataframe table table-sm table-striped">
+<style type="text/css">
+</style>
+<table id="T_9a40f">
   <thead>
     <tr>
-      <th></th>
-      <th>Understand</th>
-      <th>Plan</th>
-      <th>Collect</th>
-      <th>Store</th>
-      <th>Clean</th>
-      <th>Explore</th>
-      <th>Prepare</th>
-      <th>Model</th>
-      <th>Interpret</th>
-      <th>Communicate</th>
-      <th>Deploy</th>
-      <th>Reflect</th>
+      <th class="index_name level0"></th>
+      <th id="T_9a40f_level0_col0" class="col_heading level0 col0">understand</th>
+      <th id="T_9a40f_level0_col1" class="col_heading level0 col1">plan</th>
+      <th id="T_9a40f_level0_col2" class="col_heading level0 col2">collect</th>
+      <th id="T_9a40f_level0_col3" class="col_heading level0 col3">store</th>
+      <th id="T_9a40f_level0_col4" class="col_heading level0 col4">clean</th>
+      <th id="T_9a40f_level0_col5" class="col_heading level0 col5">explore</th>
+      <th id="T_9a40f_level0_col6" class="col_heading level0 col6">prepare</th>
+      <th id="T_9a40f_level0_col7" class="col_heading level0 col7">model</th>
+      <th id="T_9a40f_level0_col8" class="col_heading level0 col8">interpret</th>
+      <th id="T_9a40f_level0_col9" class="col_heading level0 col9">communicate</th>
+      <th id="T_9a40f_level0_col10" class="col_heading level0 col10">deploy</th>
+      <th id="T_9a40f_level0_col11" class="col_heading level0 col11">reflect</th>
+    </tr>
+    <tr>
+      <th class="index_name level0"></th>
+      <th class="blank col0">&nbsp;</th>
+      <th class="blank col1">&nbsp;</th>
+      <th class="blank col2">&nbsp;</th>
+      <th class="blank col3">&nbsp;</th>
+      <th class="blank col4">&nbsp;</th>
+      <th class="blank col5">&nbsp;</th>
+      <th class="blank col6">&nbsp;</th>
+      <th class="blank col7">&nbsp;</th>
+      <th class="blank col8">&nbsp;</th>
+      <th class="blank col9">&nbsp;</th>
+      <th class="blank col10">&nbsp;</th>
+      <th class="blank col11">&nbsp;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>Tukey</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <th id="T_9a40f_level0_row0" class="row_heading level0 row0">Tukey</th>
+      <td id="T_9a40f_row0_col0" class="data row0 col0"></td>
+      <td id="T_9a40f_row0_col1" class="data row0 col1">planning</td>
+      <td id="T_9a40f_row0_col2" class="data row0 col2">gathering</td>
+      <td id="T_9a40f_row0_col3" class="data row0 col3"></td>
+      <td id="T_9a40f_row0_col4" class="data row0 col4"></td>
+      <td id="T_9a40f_row0_col5" class="data row0 col5">analyzing</td>
+      <td id="T_9a40f_row0_col6" class="data row0 col6">gathering</td>
+      <td id="T_9a40f_row0_col7" class="data row0 col7">analyzing</td>
+      <td id="T_9a40f_row0_col8" class="data row0 col8">interpret</td>
+      <td id="T_9a40f_row0_col9" class="data row0 col9"></td>
+      <td id="T_9a40f_row0_col10" class="data row0 col10"></td>
+      <td id="T_9a40f_row0_col11" class="data row0 col11"></td>
     </tr>
     <tr>
-      <th>KDD</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <th id="T_9a40f_level0_row1" class="row_heading level0 row1">KDD</th>
+      <td id="T_9a40f_row1_col0" class="data row1 col0"></td>
+      <td id="T_9a40f_row1_col1" class="data row1 col1"></td>
+      <td id="T_9a40f_row1_col2" class="data row1 col2">selection </td>
+      <td id="T_9a40f_row1_col3" class="data row1 col3"></td>
+      <td id="T_9a40f_row1_col4" class="data row1 col4">pre-processing</td>
+      <td id="T_9a40f_row1_col5" class="data row1 col5"></td>
+      <td id="T_9a40f_row1_col6" class="data row1 col6">transformation</td>
+      <td id="T_9a40f_row1_col7" class="data row1 col7">data mining</td>
+      <td id="T_9a40f_row1_col8" class="data row1 col8">interpretation and evaluation</td>
+      <td id="T_9a40f_row1_col9" class="data row1 col9"></td>
+      <td id="T_9a40f_row1_col10" class="data row1 col10"></td>
+      <td id="T_9a40f_row1_col11" class="data row1 col11"></td>
     </tr>
     <tr>
-      <th>SEMMA</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <th id="T_9a40f_level0_row2" class="row_heading level0 row2">SEMMA</th>
+      <td id="T_9a40f_row2_col0" class="data row2 col0"></td>
+      <td id="T_9a40f_row2_col1" class="data row2 col1"></td>
+      <td id="T_9a40f_row2_col2" class="data row2 col2">sample </td>
+      <td id="T_9a40f_row2_col3" class="data row2 col3"></td>
+      <td id="T_9a40f_row2_col4" class="data row2 col4"></td>
+      <td id="T_9a40f_row2_col5" class="data row2 col5">explore</td>
+      <td id="T_9a40f_row2_col6" class="data row2 col6">modify</td>
+      <td id="T_9a40f_row2_col7" class="data row2 col7">model</td>
+      <td id="T_9a40f_row2_col8" class="data row2 col8">assess</td>
+      <td id="T_9a40f_row2_col9" class="data row2 col9"></td>
+      <td id="T_9a40f_row2_col10" class="data row2 col10"></td>
+      <td id="T_9a40f_row2_col11" class="data row2 col11"></td>
     </tr>
     <tr>
-      <th>Hayashi</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <th id="T_9a40f_level0_row3" class="row_heading level0 row3">Hayashi</th>
+      <td id="T_9a40f_row3_col0" class="data row3 col0">design</td>
+      <td id="T_9a40f_row3_col1" class="data row3 col1">design</td>
+      <td id="T_9a40f_row3_col2" class="data row3 col2">collection</td>
+      <td id="T_9a40f_row3_col3" class="data row3 col3">collection</td>
+      <td id="T_9a40f_row3_col4" class="data row3 col4"></td>
+      <td id="T_9a40f_row3_col5" class="data row3 col5">collection</td>
+      <td id="T_9a40f_row3_col6" class="data row3 col6">collection</td>
+      <td id="T_9a40f_row3_col7" class="data row3 col7">analysis</td>
+      <td id="T_9a40f_row3_col8" class="data row3 col8">analysis </td>
+      <td id="T_9a40f_row3_col9" class="data row3 col9"></td>
+      <td id="T_9a40f_row3_col10" class="data row3 col10"></td>
+      <td id="T_9a40f_row3_col11" class="data row3 col11"></td>
     </tr>
     <tr>
-      <th>CRISPDM</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <th id="T_9a40f_level0_row4" class="row_heading level0 row4">CRISPDM</th>
+      <td id="T_9a40f_row4_col0" class="data row4 col0">business understanding</td>
+      <td id="T_9a40f_row4_col1" class="data row4 col1">business understanding</td>
+      <td id="T_9a40f_row4_col2" class="data row4 col2">data understanding</td>
+      <td id="T_9a40f_row4_col3" class="data row4 col3">data preparation</td>
+      <td id="T_9a40f_row4_col4" class="data row4 col4">data preparation</td>
+      <td id="T_9a40f_row4_col5" class="data row4 col5">data understanding*</td>
+      <td id="T_9a40f_row4_col6" class="data row4 col6">data preparation</td>
+      <td id="T_9a40f_row4_col7" class="data row4 col7">modeling</td>
+      <td id="T_9a40f_row4_col8" class="data row4 col8">evaluation</td>
+      <td id="T_9a40f_row4_col9" class="data row4 col9">deployment</td>
+      <td id="T_9a40f_row4_col10" class="data row4 col10">deployment</td>
+      <td id="T_9a40f_row4_col11" class="data row4 col11"></td>
     </tr>
     <tr>
-      <th>OSEMI</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <th id="T_9a40f_level0_row5" class="row_heading level0 row5">OSEMI</th>
+      <td id="T_9a40f_row5_col0" class="data row5 col0"></td>
+      <td id="T_9a40f_row5_col1" class="data row5 col1"></td>
+      <td id="T_9a40f_row5_col2" class="data row5 col2">obtain</td>
+      <td id="T_9a40f_row5_col3" class="data row5 col3"></td>
+      <td id="T_9a40f_row5_col4" class="data row5 col4">scrub</td>
+      <td id="T_9a40f_row5_col5" class="data row5 col5">explore</td>
+      <td id="T_9a40f_row5_col6" class="data row5 col6">scrub*</td>
+      <td id="T_9a40f_row5_col7" class="data row5 col7">model</td>
+      <td id="T_9a40f_row5_col8" class="data row5 col8">interpret</td>
+      <td id="T_9a40f_row5_col9" class="data row5 col9"></td>
+      <td id="T_9a40f_row5_col10" class="data row5 col10"></td>
+      <td id="T_9a40f_row5_col11" class="data row5 col11"></td>
     </tr>
     <tr>
-      <th>Ojeda+</th>
-      <td>(collection)</td>
-      <td>collection</td>
-      <td></td>
-      <td></td>
-      <td>collection</td>
-      <td>analysis</td>
-      <td>analysis</td>
-      <td>design</td>
-      <td>collection</td>
-      <td></td>
-      <td>collection</td>
-      <td>design</td>
+      <th id="T_9a40f_level0_row6" class="row_heading level0 row6">Ojeda+</th>
+      <td id="T_9a40f_row6_col0" class="data row6 col0"></td>
+      <td id="T_9a40f_row6_col1" class="data row6 col1"></td>
+      <td id="T_9a40f_row6_col2" class="data row6 col2">acquisition</td>
+      <td id="T_9a40f_row6_col3" class="data row6 col3">acquisition</td>
+      <td id="T_9a40f_row6_col4" class="data row6 col4">munging, wrangling, and manipulation</td>
+      <td id="T_9a40f_row6_col5" class="data row6 col5">exploration and understanding</td>
+      <td id="T_9a40f_row6_col6" class="data row6 col6">munging, wrangling, and manipulatiom</td>
+      <td id="T_9a40f_row6_col7" class="data row6 col7">analysis and modeling</td>
+      <td id="T_9a40f_row6_col8" class="data row6 col8"></td>
+      <td id="T_9a40f_row6_col9" class="data row6 col9">communicating</td>
+      <td id="T_9a40f_row6_col10" class="data row6 col10">operationalizing</td>
+      <td id="T_9a40f_row6_col11" class="data row6 col11"></td>
     </tr>
     <tr>
-      <th>Caffo+</th>
-      <td>pre-processing</td>
-      <td>selection</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>interpretation and evaluation</td>
-      <td>data mining</td>
-      <td></td>
-      <td>transformation</td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <th id="T_9a40f_level0_row7" class="row_heading level0 row7">Caffo+</th>
+      <td id="T_9a40f_row7_col0" class="data row7 col0"></td>
+      <td id="T_9a40f_row7_col1" class="data row7 col1"></td>
+      <td id="T_9a40f_row7_col2" class="data row7 col2"></td>
+      <td id="T_9a40f_row7_col3" class="data row7 col3"></td>
+      <td id="T_9a40f_row7_col4" class="data row7 col4"></td>
+      <td id="T_9a40f_row7_col5" class="data row7 col5"></td>
+      <td id="T_9a40f_row7_col6" class="data row7 col6"></td>
+      <td id="T_9a40f_row7_col7" class="data row7 col7"></td>
+      <td id="T_9a40f_row7_col8" class="data row7 col8"></td>
+      <td id="T_9a40f_row7_col9" class="data row7 col9"></td>
+      <td id="T_9a40f_row7_col10" class="data row7 col10"></td>
+      <td id="T_9a40f_row7_col11" class="data row7 col11"></td>
     </tr>
     <tr>
-      <th>Donoho</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <th id="T_9a40f_level0_row8" class="row_heading level0 row8">Donoho</th>
+      <td id="T_9a40f_row8_col0" class="data row8 col0"></td>
+      <td id="T_9a40f_row8_col1" class="data row8 col1"></td>
+      <td id="T_9a40f_row8_col2" class="data row8 col2"></td>
+      <td id="T_9a40f_row8_col3" class="data row8 col3"></td>
+      <td id="T_9a40f_row8_col4" class="data row8 col4"></td>
+      <td id="T_9a40f_row8_col5" class="data row8 col5"></td>
+      <td id="T_9a40f_row8_col6" class="data row8 col6"></td>
+      <td id="T_9a40f_row8_col7" class="data row8 col7"></td>
+      <td id="T_9a40f_row8_col8" class="data row8 col8"></td>
+      <td id="T_9a40f_row8_col9" class="data row8 col9"></td>
+      <td id="T_9a40f_row8_col10" class="data row8 col10"></td>
+      <td id="T_9a40f_row8_col11" class="data row8 col11"></td>
     </tr>
     <tr>
-      <th>Géron</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <th id="T_9a40f_level0_row9" class="row_heading level0 row9">Géron</th>
+      <td id="T_9a40f_row9_col0" class="data row9 col0"></td>
+      <td id="T_9a40f_row9_col1" class="data row9 col1"></td>
+      <td id="T_9a40f_row9_col2" class="data row9 col2"></td>
+      <td id="T_9a40f_row9_col3" class="data row9 col3"></td>
+      <td id="T_9a40f_row9_col4" class="data row9 col4"></td>
+      <td id="T_9a40f_row9_col5" class="data row9 col5"></td>
+      <td id="T_9a40f_row9_col6" class="data row9 col6"></td>
+      <td id="T_9a40f_row9_col7" class="data row9 col7"></td>
+      <td id="T_9a40f_row9_col8" class="data row9 col8"></td>
+      <td id="T_9a40f_row9_col9" class="data row9 col9"></td>
+      <td id="T_9a40f_row9_col10" class="data row9 col10"></td>
+      <td id="T_9a40f_row9_col11" class="data row9 col11"></td>
     </tr>
     <tr>
-      <th>Das</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <th id="T_9a40f_level0_row10" class="row_heading level0 row10">Das</th>
+      <td id="T_9a40f_row10_col0" class="data row10 col0"></td>
+      <td id="T_9a40f_row10_col1" class="data row10 col1"></td>
+      <td id="T_9a40f_row10_col2" class="data row10 col2"></td>
+      <td id="T_9a40f_row10_col3" class="data row10 col3"></td>
+      <td id="T_9a40f_row10_col4" class="data row10 col4"></td>
+      <td id="T_9a40f_row10_col5" class="data row10 col5"></td>
+      <td id="T_9a40f_row10_col6" class="data row10 col6"></td>
+      <td id="T_9a40f_row10_col7" class="data row10 col7"></td>
+      <td id="T_9a40f_row10_col8" class="data row10 col8"></td>
+      <td id="T_9a40f_row10_col9" class="data row10 col9"></td>
+      <td id="T_9a40f_row10_col10" class="data row10 col10"></td>
+      <td id="T_9a40f_row10_col11" class="data row10 col11"></td>
     </tr>
     <tr>
-      <th>Dataman</th>
-      <td></td>
-      <td>sample</td>
-      <td></td>
-      <td></td>
-      <td>explore</td>
-      <td>assess</td>
-      <td>model</td>
-      <td></td>
-      <td>modify</td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <th id="T_9a40f_level0_row11" class="row_heading level0 row11">Dataman</th>
+      <td id="T_9a40f_row11_col0" class="data row11 col0"></td>
+      <td id="T_9a40f_row11_col1" class="data row11 col1"></td>
+      <td id="T_9a40f_row11_col2" class="data row11 col2"></td>
+      <td id="T_9a40f_row11_col3" class="data row11 col3"></td>
+      <td id="T_9a40f_row11_col4" class="data row11 col4"></td>
+      <td id="T_9a40f_row11_col5" class="data row11 col5"></td>
+      <td id="T_9a40f_row11_col6" class="data row11 col6"></td>
+      <td id="T_9a40f_row11_col7" class="data row11 col7"></td>
+      <td id="T_9a40f_row11_col8" class="data row11 col8"></td>
+      <td id="T_9a40f_row11_col9" class="data row11 col9"></td>
+      <td id="T_9a40f_row11_col10" class="data row11 col10"></td>
+      <td id="T_9a40f_row11_col11" class="data row11 col11"></td>
     </tr>
     <tr>
-      <th>Porter</th>
-      <td></td>
-      <td>gathering</td>
-      <td></td>
-      <td></td>
-      <td>analyzing</td>
-      <td>interpret</td>
-      <td>analyzing</td>
-      <td>planning</td>
-      <td>gathering</td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <th id="T_9a40f_level0_row12" class="row_heading level0 row12">Porter</th>
+      <td id="T_9a40f_row12_col0" class="data row12 col0"></td>
+      <td id="T_9a40f_row12_col1" class="data row12 col1"></td>
+      <td id="T_9a40f_row12_col2" class="data row12 col2"></td>
+      <td id="T_9a40f_row12_col3" class="data row12 col3"></td>
+      <td id="T_9a40f_row12_col4" class="data row12 col4"></td>
+      <td id="T_9a40f_row12_col5" class="data row12 col5"></td>
+      <td id="T_9a40f_row12_col6" class="data row12 col6"></td>
+      <td id="T_9a40f_row12_col7" class="data row12 col7"></td>
+      <td id="T_9a40f_row12_col8" class="data row12 col8"></td>
+      <td id="T_9a40f_row12_col9" class="data row12 col9"></td>
+      <td id="T_9a40f_row12_col10" class="data row12 col10"></td>
+      <td id="T_9a40f_row12_col11" class="data row12 col11"></td>
     </tr>
   </tbody>
 </table>
-</div>
 </div>
 </div>
 </section>
@@ -682,6 +715,9 @@ Azevedo, Ana Isabel Rojão Lourenço, and Manuel Filipe Santos. 2008. <span>“<
 </div>
 <div id="ref-caffoExecutiveDataScience2015" class="csl-entry" role="doc-biblioentry">
 Caffo, Brian, Roger D. Peng, and Jeffrey Leek. 2015. <em>Executive <span>Data Science</span></em>. <span>Leanpub</span>.
+</div>
+<div id="ref-conwayDataScienceVenn2010" class="csl-entry" role="doc-biblioentry">
+Conway, Drew. 2010. <span>“The <span>Data Science Venn Diagram</span>.”</span> <em>Drew Conway</em>.
 </div>
 <div id="ref-dasDataScienceLife2019" class="csl-entry" role="doc-biblioentry">
 Das, Sangeet Moy. 2019. <span>“Data <span>Science Life Cycle</span> 101 for <span>Dummies</span> Like <span>Me</span>.”</span> <em>Medium</em>. https://towardsdatascience.com/data-science-life-cycle-101-for-dummies-like-me-e66b47ad8d8f.

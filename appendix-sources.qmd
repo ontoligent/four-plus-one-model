@@ -18,15 +18,19 @@ Each source entry below contains short description and then list the phases cite
 
 1.  Understand
 2.  Plan
+
 3.  Collect
 4.  Store
 5.  Clean
 6.  Explore
 7.  Prepare
+
 8.  Model
 9.  Interpret
+
 10. Communicate
 11. Deploy
+
 12. Reflect
 
 These mappings are indicated by an arrow pointing to the subset of terms from the standard sequence, e.g. ... $\rightarrow [Explore]$ These mappings are also aggregated into a composite pipeline and displayed the table below;each model row is referenced by its key as defined in the entries. 
@@ -39,7 +43,7 @@ sources = "Tukey KDD SEMMA Hayashi CRISPDM OSEMI Ojeda+ Caffo+ Donoho Géron Das
 pipes = {source:'' for source in sources}
 ```
 
-## Source List
+## List of Sources
 
 ### Tukey on Data Analysis
 
@@ -84,7 +88,7 @@ Year: 1996
 Source: @fayyadKnowledgeDiscoveryData1996 [URL→](https://www.aaai.org/Papers/KDD/1996/KDD96-014.pdf?utm_campaign=ml4devs-newsletter&utm_medium=email&utm_source=Revue%20newsletter)\
 Field: Data Mining\
 
-KDD, or Knowledge Discovery in Databases, emerged in the late 1980s as both datasets and the computational resources to work with them became abundant. These resources included commercial databases and the PC. In many ways the most adjacent field to contemoporary data science, this approach is unabashedly dedicated to finding patterns in data prior to developing a probabilistic model to justify their use. Fayyad's essay identifies five steps [@fayyadKnowledgeDiscoveryData1996: 84]. He emphasizes the highly iterative and cyclical nature of the process, arguing that it "may contain loops between any two steps." Another significant aspect of this conception of the pipeline is the role of exploration in the analytical phase: "Data Mining is a step in the KDD process consisting of applying data analysis and discovery algorithms that, under acceptable computational efficiency limitations, produce a particular enumeration of patterns over the data ...." (p. 83)
+KDD, or Knowledge Discovery in Databases, emerged in the late 1980s as both datasets and the computational resources to work with them became abundant. These resources included commercial databases and personal computers. In many ways the most adjacent field to contemoporary data science, this approach is unabashedly dedicated to finding patterns in data prior to developing a probabilistic model to justify their use. Fayyad's essay identifies five steps [@fayyadKnowledgeDiscoveryData1996: 84]. He emphasizes the highly iterative and cyclical nature of the process, arguing that it "may contain loops between any two steps." Another significant aspect of this conception of the pipeline is the role of exploration in the analytical phase: "Data Mining is a step in the KDD process consisting of applying data analysis and discovery algorithms that, under acceptable computational efficiency limitations, produce a particular enumeration of patterns over the data ...." (p. 83)
 
 1.  **Selection**: Creating a target data set, or focusing on a subset of variables or data samples, on which discovery is to be performed. 
 $\rightarrow [Collect]$
@@ -153,12 +157,12 @@ Reflect |
 
 ### Hayashi on Data Science
 
-Key: `Hayashi` \ 
+Key: `Hayashi` \
 Year: 1998 \
 Source: @hayashiDataScienceClassification1998 [URL→](https://link.springer.com/chapter/10.1007/978-4-431-65950-1_3) \
 Field: Statistics
 
-The Japanese statistician Chikio Hayashi adopted the term "data science" in the early 1990s to define a field that did not succumb to what he saw to be the errors of both statistics and data analysis. He argued that mathematical statistics had become too attached to problems of inference and removed from reality, while data analysis had lost interest in understanding the meaning of the data it deals with. His definition of data science is decidely processual: "Data Science consists of three phases: design for data, collection of data and analysis on data. It is important that the three phases are treated with the concept of unification based on the fundamental philosophy of science .... In these phases the methods which are fitted for the object and are valid, must be studied with a good perspective." (p. 41) Similar to KDD and CRISM-PM, Hayashi envisioned this process as a spiral, oscillating between poles if what he called "diversification" and "simplification." Note also that each of these terms are broad; each, as described, comprises more than on of the standard sequence phases.
+The Japanese statistician Chikio Hayashi adopted the term "data science" in the early 1990s to define a field that did not succumb to what he saw to be the errors of both statistics and data analysis. He argued that mathematical statistics had become too attached to problems of inference and removed from reality, while data analysis had lost interest in understanding the meaning of the data it deals with. His definition of data science is decidely processual: "Data Science consists of three phases: design for data, collection of data and analysis on data. It is important that the three phases are treated with the concept of unification based on the fundamental philosophy of science .... In these phases the methods which are fitted for the object and are valid, must be studied with a good perspective." (p. 41) Similar to KDD and CRISM-PM, Hayashi envisioned this process as a spiral, oscillating between poles if what he called "diversification" and "simplification." Note also that each of these terms, as described, comprises more than on of the standard sequence phases.
 
 1.  **Design**: Surveys and experiments are developed to capture data from "multifarious phenomena."
 $\rightarrow [Understand, Plan]$
@@ -174,7 +178,7 @@ Understand | design
 Plan | design
 Collect | collection
 Store | collection
-Clean | (collection)
+Clean | 
 Explore | collection
 Prepare | collection
 Model | analysis
@@ -188,68 +192,76 @@ Reflect |
 ### Wirth and Hipp on CRISP-DM
 
 Key: `CRISPDM` \
+Year: 1999 \
 Source: @wirthCRISPDMStandardProcess1999 [URL→](http://www.cs.unibo.it/~danilo.montesi/CBD/Beatriz/10.1.1.198.5133.pdf) \
 Field: Data Mining
 
-Notes:
+By the late 1990s, the practice of data mining had become widespread in industry and globally. In 1999 the Cross Industry Standard Process for Data Mining (CRISP-DM) was developed as a comprehensive and general model to support the use of data mining in a broad range of sectors in a principled manner. Designed to work within a project management framework, this model is by far the most developed, and it continues to influence the field of data science to this day. Like KDD before it, the model emphasizes the cyclic and recursive nature of the process, and this perspective is reflected in the circular diagram that often accompanies its presentation. The steps below are based on the summary presented in Wirth and Hipp's essay.
 
--   "At the top level, the data mining process is organized into a small number of phases. Each phase consists of several second-level generic tasks."
--   The process is cyclic and recursive.
+![Process diagram showing the relationship between the different phases of CRISP-DM (Wikipedia)](images/1024px-CRISP-DM_Process_Diagram.png)
 
-Steps:
-
-1.  Business Understanding: Understanding project objectives and requirements from a business perspective. Development of a plan.
-2.  Data Understanding: Initial data collection and activities to get familiar with the data, e.g. to identify data quality problems, to discover first insights into the data, or to detect interesting subsets to form hypotheses for hidden information. This is really two phases, which are combined because of their close relationship: *Collection* and *Exploration*.
-3.  Data Preparation: Construction of the final dataset. Tasks include table, record, an attribute selection, data cleaning, construction of new attributes, and transformation of data for modeling tools.
-4.  Modeling: Modeling techniques selected and applied, parameters calibrated.
-5.  Evaluation At this stage in the project you have built one or more models that appear to have high quality, from a data analysis perspective. Before proceeding to final deployment of the model, it is important to more thoroughly evaluate the model, and review the steps executed to construct the model, to be certain it properly achieves the business objectives. A key objective is to determine if there is some important business issue that has not been sufficiently considered. At the end of this phase, a decision on the use of the data mining results should be reached.
-6.  Deployment: Creation of the model is generally not the end of the project. Usually, the knowledge gained will need to be organized and presented in a way that the customer can use it. Depending on the requirements, the deployment phase can be as simple as generating a report or as complex as implementing a repeatable data mining process. In many cases it will be the user, not the data analyst, who will carry out the deployment steps. In any case, it is important to understand up front what actions will need to be carried out in order to actually make use of the created models.
+1.  **Business Understanding**: Understanding project objectives and requirements from a business perspective. Includes the development of a plan.
+$\rightarrow [Understand, Plan]$
+2.  **Data Understanding**: The initial data collection and activities to get familiar with the data, e.g. to identify data quality problems, to discover first insights into the data, or to detect interesting subsets to form hypotheses for hidden information. This is really two phases --- **Collection** and **Exploration** --- which are combined because of their close, iterative relationship.
+$\rightarrow [Collect, Explore]$
+3.  **Data Preparation**: Construction of the final dataset for analytical use. Tasks include table, record, an attribute selection, data cleaning, construction of new attributes, and transformation of data for modeling tools.
+$\rightarrow [Clean, Prepare]$
+4.  **Modeling**: Modeling techniques are selected and applied, parameters calibrated. Modeling techniques include a broad range of unsupervised and supervised methods. As with KDD, there is an emphasis on pattern discovery, which has the effect of promoted methods that other models place squarely in the Explore phase of the standard sequence.
+$\rightarrow [Model]$
+5.  **Evaluation**: Evaluation of model performance by both intrinsic and extrinsic measures. Regarding the latter, a key objective is to determine if an important business issue has not been sufficiently considered.
+$\rightarrow [Interpret]$
+6.  **Deployment**: The knowledge gained by the model is presented in a way that the customer can use it. This may be something as simple as a report or as complex as a repeatable data mining process. In many cases the user, not the data analyst, will carry out the deployment.
+$\rightarrow [Deploy]$
 
 ```{python}
-
 pipes['CRISPDM'] = """
-Understand | 
-Plan | 
-Collect | 
-Store | 
-Clean | 
-Explore | 
-Prepare | 
-Model | 
-Interpret | 
-Communicate | 
-Deploy | 
+Understand | Business understanding
+Plan | Business Understanding
+Collect | Data Understanding
+Store | Data Preparation
+Clean | Data Preparation
+Explore | Data Understanding*
+Prepare | Data Preparation
+Model | Modeling
+Interpret | Evaluation
+Communicate | Deployment
+Deploy | Deployment
 Reflect | 
 """
 ```
 
 ### Mason and Wiggins on OSEMI
 
-Key: `OSEMI` Source: @masonTaxonomyDataScience2010 [URL→](https://sites.google.com/a/isim.net.in/datascience_isim/taxonomy)\
+Key: `OSEMI` \
+Year: 2010 \
+Source: @masonTaxonomyDataScience2010 [URL→](https://sites.google.com/a/isim.net.in/datascience_isim/taxonomy) \
 Field: Data Science
 
-Notes: \* Assumes context of web, available data. \* Borrowed language from [5 Steps of a Data Science Project Lifecycle](https://towardsdatascience.com/5-steps-of-a-data-science-project-lifecycle-26c50372b492).
+After the phrase "data science" went viral (circa 2009), there were many efforts to make sense of the idea. It is around this time (2010) that Conway posted his Venn diagram of data science [@conwayDataScienceVenn2010]. Another influence model, based explicitly on the pipeline, came from Mason and Wiggins in a blog post hosted at O'Reilly's Tech Radar site. In contrast to previous models rooted in statistics, this model assumes that data are abundant and available, such as data scrapable from the Web.
 
-Steps:
-
-1.  Obtain: Gather data from relevant sources through APIs, web scraping, etc.
-2.  Scrub: Clean data and convert to machine readable formats. Clearning includes handling missing data, inconsistent labels, or awkward formatting; stripping extraneous characters; normalizing values, etc.
-3.  Explore: Find significan patterns and trends using statistical and data analytic methods, These include visualizing, clustering, performing dimensionality reduction.
-4.  Model: Construct methods to predict and forecast.
-5.  Interpret: Put the results to good use.
+1.  **Obtain**: Gather data from relevant sources through APIs, web scraping, etc.
+$\rightarrow [Collect]$
+2.  **Scrub**: Clean data and convert data to machine readable formats. Clearning includes handling missing data, inconsistent labels, or awkward formatting; stripping extraneous characters; normalizing values, etc.
+$\rightarrow [Clean, Prepare]$
+3.  **Explore**: Find significant patterns and trends using statistical and data analytic methods, such as visualizing, clustering. Also includes transformations of the for more effective analysis, such as dimensionality reduction.
+$\rightarrow [Explore]$
+4.  **Model**: Construct methods to predict and forecast. These methods include those of inferential statistics and predictive machine learning. 
+$\rightarrow [Model]$
+5.  **Interpret**: Making sense of the results as well as evaluating the performance of models. May involve domain experts. Also includes methods such as regularization that make models interpretable to those who use them, e.g. scientists or business people.
+$\rightarrow [Interpret]$
 
 ```{python}
 
 pipes['OSEMI'] = """
 Understand | 
 Plan | 
-Collect | 
+Collect | Obtain
 Store | 
-Clean | 
-Explore | 
-Prepare | 
-Model | 
-Interpret | 
+Clean | Scrub
+Explore | Explore
+Prepare | Scrub*
+Model | Model
+Interpret | Interpret
 Communicate | 
 Deploy | 
 Reflect | 
@@ -259,29 +271,38 @@ Reflect |
 
 ### Ojeda, et al. on Data Science
 
-Key: `Ojeda+` Source: @ojedaPracticalDataScience2014 [URL→](https://www.packtpub.com/product/practical-data-science-cookbook-second-edition/9781787129627)\
+Key: `Ojeda+`\
+Year: 2014 \
+Source: @ojedaPracticalDataScience2014 [URL→](https://www.packtpub.com/product/practical-data-science-cookbook-second-edition/9781787129627)\
 Field: Data Science
 
-1.  Acquisition: The first step in the pipeline is to acquire the data from a variety of sources, including relational databases, NoSQL and document stores, web scraping, and distributed databases such as HDFS on a Hadoop platform, RESTful APIs, flat files, and hopefully this is not the case, PDFs.
-2.  Exploration and understanding: The second step is to come to an understanding of the data that you will use and how it was collected; this often requires significant exploration.
-3.  Munging, wrangling, and manipulation: This step is often the single most time-consuming and important step in the pipeline. Data is almost never in the needed form for the desired analysis.
-4.  Analysis and modeling: This is the fun part where the data scientist gets to explore the statistical relationships between the variables in the data and pulls out his or her bag of machine learning tricks to cluster, categorize, or classify the data and create predictive models to see into the future.
-5.  Communicating and operationalizing: At the end of the pipeline, we need to give the data back in a compelling form and structure, sometimes to ourselves to inform the next iteration, and sometimes to a completely different audience. The data products produced can be a simple one-off report or a scalable web product that will be used interactively by millions.
+By 2014, data science had become a widespread practice in industry and the academic, and explanations of its nature became the subject of many books. This text is one of a genre that presents the field as a process, perhaps due to the influence of the CRISP-DM and OSEMI models, and uses the expression pipeline throughout. Note that the model defined in this book is not presented here as canonical. It suffers from various inconsistences, such as the labeling of steps in the text representation of the pipeline versus those on diagrams. It is included to demonstrate the pervasiveness of the model. 
+
+1.  **Acquisition**: Acquire the data from relational databases, NoSQL and document stores, web scraping, distributed databases (e.g. HDFS on a Hadoop platform), RESTful APIs, flat files, etc. Consistent with the other data mining models, the emphasis here is on working with available data, not generating it.
+$\rightarrow [Collect]$
+2.  **Exploration and understanding**: Understand the data and how it was collected or produced; this often requires significant exploration. Note that this step does *not* correspond to exploration in the sense of exploratory data analysis (EDA). Rather, it reflects the position of the data scientist as the receiver of someone else's data and the need to infer what would normally belong to the first step of the standard squence $Understand$.
+$\rightarrow [Understand]$
+3.  **Munging, wrangling, and manipulation**: Convert the data into the form required for analysis. This includes a wide range of activities, such as those mentioned in previous models. However, it also conflates the standard phases  $Clean$ and $Prepare$.
+$\rightarrow [Clean, Prepare]$
+4.  **Analysis and modeling**: Apply statistical and machine learning methods, including clustering, categorization, and classification. One presumes that the standard step of $Explore$ is included here.
+$\rightarrow [Explore, Model]$
+5.  **Communicating and operationalizing**: At the end of the pipeline, we need to give the data back in a compelling form and structure, sometimes to ourselves to inform the next iteration, and sometimes to a completely different audience. The data products produced can be a simple one-off report or a scalable web product that will be used interactively by millions.
+$\rightarrow [Communicate, Deploy]$
 
 ```{python}
 
 pipes['Ojeda+'] = """
 Understand | 
 Plan | 
-Collect | 
-Store | 
-Clean | 
-Explore | 
-Prepare | 
-Model | 
+Collect | Acquisition
+Store | Acquisition
+Clean | Munging, wrangling, and manipulation
+Explore | Exploration and understanding
+Prepare | Munging, wrangling, and manipulatiom
+Model | Analysis and modeling
 Interpret | 
-Communicate | 
-Deploy | 
+Communicate | Communicating
+Deploy | Operationalizing
 Reflect | 
 """
 ```
@@ -480,6 +501,15 @@ Reflect |
 ```
 
 
+## Comments
+
+* Place of clustering
+* Place of explorations
+* Cycles and pipes
+* Missing steps, implicit steps
+* Differences in order mostly confined to groups
+* Right even when wrong -- the end points $I$ and $V$, and the middle $III$,  remain constant; the arms, as it were, are where it gets messy.
+
 ## Summary Table
 
 ```{python}
@@ -493,20 +523,24 @@ import re
 data = []
 cols = ['Source', 'Std Phase', 'Src Phase']
 for source in pipes:
-    for row in pipes[source].split("\n")[1:-1]:
+    for row in pipes[source].lower().split("\n")[1:-1]:
         data.append([source] + re.split('\s*\|\s*', row))
 
 # Convert CSV to wide table
 df = pd.DataFrame(data, columns=cols).reset_index(drop=True).set_index(cols[:2]).unstack() 
 df.columns = df.columns.droplevel(0)
-df.columns = phases # Preserve sorting
-df.index = sources # Preserve sorting
+
+# Preserve sorting
+df = df[[phase.lower() for phase in phases]]
+df = df.T[sources].T
+
 df.columns.name = ''
+df.index.name = ''
 ```
 
 ```{python}
 #| output: true 
-df
+df.style.bar()
 ```
 
 
