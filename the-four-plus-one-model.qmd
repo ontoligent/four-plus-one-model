@@ -18,7 +18,7 @@ By thinking of the pipeline as a story we can analyze it with techniques develop
 
 ## The Primary Standard Sequence
 
-An analysis of a representative sample of essays that define a data processing pipeline shows that the various pipeline stories consist of elements drawn from a primary standard sequence of twelve elements, give or take a few depending on how one might expand or contract terms. These are listed and defined below by a core set of event types, with the understanding that many synonyms are employed in the examples.
+An analysis of a representative sample of essays that define a data processing pipeline shows that the various pipeline stories consist of elements drawn from a primary standard sequence of about twelve elements, give or take a few depending on how one might expand or contract terms. These are listed and defined below by a core set of event types, with the understanding that many synonyms are employed in the examples.
 
 1.  [Understand]{.underline}. The work of developing a question that the acquisition and analysis of data can answer. Questions may range from the status of a scientific hypothesis the merit of a business value proposition. More broadly, this is the stage of framing and scoping the work that follows.
 2.  [Plan]{.underline}. The work of designing an experiment to produce data or of devising a strategy to acquire existing data relevant to the goals specified by the Understand phase.
@@ -47,7 +47,7 @@ As the CRISP-DM model shows, in some cases the pipeline is described as a circul
 
 ## Seven Chapters
 
-A close look at the twelve phases listed above shows that a given phase may be more closely related to some phases than to others --- in other words, the phases can be grouped thematically. For example, it seems clear that the Understand and Plan phases goes together, just as Clean, Explore, and Prepare do. They belong together because we can imagine performing their associated activities together, and separately from the other phases. Also, in some cases the order of the phases within the group may change --- for example, explore might precede cleaning in the event, as the two are often performed simultaneously --- while the sequential order of the groups is less likely to vary. Finally, we can imagine assigning different teams to perform the labor in each thematic grouping, by virtue of the expertise required to carry them out.
+A close look at the twelve phases listed above shows that a given phase may be more closely related to some phases than to others --- in other words, the phases can be grouped thematically. For example, it seems clear that the Understand and Plan phases go together, just as Clean, Explore, and Prepare do. They belong together because we can imagine performing their associated activities together, and separately from the other phases. Also, in some cases the order of the phases within the group may change --- for example, explore might precede cleaning in the event, as the two are often performed simultaneously --- while the sequential order of the groups is less likely to vary. Finally, we can imagine assigning different teams to perform the labor in each thematic grouping, by virtue of the expertise required to carry them out.
 
 Given this, the twelve-part composite pipeline can be reduced to seven groups:
 
@@ -123,7 +123,19 @@ Is there a way to understand how the four primary areas are related to each othe
 
 Regarding the concrete and the abstract, it's clear that the arc model has a metric quality to it: as one moves toward the pivot point of analysis, one moves away from the concrete messiness of reality as experienced to the "tidy" and abstract world of mathematics; similarly, as one moves from the pivot back to the world, there is a requirement to convert esoteric results into more humanly intelligible forms, often through a process of concretization; visualizations succeed by employing concrete metaphors that flesh out mathematical ideas that are notoriously detached from the imagination --- no one can imagine, for example, n-dimensional spaces beyond a handful of dimensions. The arc describes a dialectic of abstraction and concretization that defines the ebb and flow and data science work.
 
+::: .table
+
+| &nbsp;         | Concrete        | Abstract        |
+|----------------|-----------------|-----------------|
+| <b>Human</b>   | I<br>VALUE      | II'<br>DESIGN   |
+| <b>Machine</b> | III'<br>SYSTEMS | IV<br>ANALYTICS |
+:::
+
+: The Four Areas in Two Dimensions
+
+<!--
 ![The Four Areas in Two Dimensions](images/image4.png){fig-align="center"}
+-->
 
 The dimension of human and machine processing exhibits a similar duality, that between the conversion of information from humanly accessible forms, such as given by data acquired by instruments, into machine readable and processible forms, and the reverse. The process of moving from human to machine representations is a large part of what data capture, modeling, and wrangling is all about, while the process of converting the results of machine learning, broadly conceived, into humanly actionable form is what visualization and productization are all about. The reality of this dualism is captured by the concept of human-computer interaction (HCI), an established field that is applicable to both sides of the arc.
 
