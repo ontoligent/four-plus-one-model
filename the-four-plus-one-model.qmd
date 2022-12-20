@@ -131,7 +131,7 @@ Regarding the concrete and the abstract, it's clear that the arc model has a met
 | <b>Machine</b> | III'<br>SYSTEMS | IV<br>ANALYTICS |
 :::
 
-: The Four Areas in Two Dimensions
+The Four Areas in Two Dimensions
 
 <!--
 ![The Four Areas in Two Dimensions](images/image4.png){fig-align="center"}
